@@ -66,9 +66,9 @@ module xoroshiro64plus (
     //    Built as a chain of 32 full-adder cells (no carry-lookahead)
     // =========================================================================
     wire [31:0] rca_sum;
-    wire [31:0] rca_carry; // carry chain; rca_carry[0] = 0 (no cin)
+    wire [32:0] rca_carry; // carry chain; rca_carry[0] = 0 (no cin)
 
-    // assign rca_carry[0] = 1'b0;
+    assign rca_carry[0] = 1'b0;
 
     genvar i;
     generate
