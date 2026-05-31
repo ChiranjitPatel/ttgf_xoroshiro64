@@ -4,11 +4,13 @@ module GF_inverter (
     input   wire a,
     output  wire y
 );
-
+ `LINT_OFF_PINMISSING_POWER_PINS
     (* keep_hierarchy *) gf180mcu_fd_sc_mcu7t5v0__inv_1    gf180mcu_inverter (
         .I  (a),
         .ZN  (y)
     );
+
+`LINT_ON_PINMISSING_POWER_PINS
 
 endmodule
 
@@ -28,3 +30,11 @@ module ring_osc #(
     assign osc_out = inv_in[0];
 
 endmodule
+
+`ifdef LINT_OFF_PINMISSING_POWER_PINS
+    `undef LINT_OFF_PINMISSING_POWER_PINS
+`endif
+
+`ifdef LINT_ON_PINMISSING_POWER_PINS
+    `undef LINT_ON_PINMISSING_POWER_PINS
+`endif
