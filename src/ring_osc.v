@@ -5,7 +5,7 @@ module GF_inverter (
     output  wire y
 );
 
-    (* keep_hierarchy *) gf180mcu_fd_sc_mcu9t5v0__inv_1    gf180mcu_inverter (
+    (* keep_hierarchy *) gf180mcu_fd_sc_mcu7t5v0__inv_1    gf180mcu_inverter (
         .I  (a),
         .ZN  (y)
     );
