@@ -68,7 +68,7 @@ module xoroshiro64plus (
     wire [31:0] rca_sum;
     wire [31:0] rca_carry; // carry chain; rca_carry[0] = 0 (no cin)
 
-    // assign rca_carry[0] = 1'b0;
+    assign rca_carry[0] = 1'b0;
 
     genvar i;
     generate
