@@ -1,5 +1,10 @@
 `default_nettype none
 
+`ifdef USE_POWER_PINS
+        `define LINT_OFF_PINMISSING_POWER_PINS /* verilator lint_off PINMISSING */
+        `define LINT_ON_PINMISSING_POWER_PINS  /* verilator lint_on PINMISSING */
+`endif
+	
 module GF_inverter (
     input   wire a,
     output  wire y
