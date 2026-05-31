@@ -67,15 +67,17 @@ module xoroshiro64plus (
     // =========================================================================
     wire [31:0] rca_sum;
     wire [31:0] rca_carry; // carry chain; rca_carry[0] = 0 (no cin)
+    wire rca_carry_cin;
 
-    assign rca_carry[0] = 1'b0;
+    // assign rca_carry[0] = 1'b0;
+    assign rca_carry_cin = 1'b0;
 
     genvar i;
     generate
         for (i = 0; i < 32; i = i + 1) begin : rca_fa
             // Full adder: sum = a^b^cin, cout = majority(a,b,cin)
-            assign rca_sum[i]       = s0[i] ^ s1[i] ^ rca_carry[i];
-            assign rca_carry[i+1]   = (s0[i] & s1[i]) | (s0[i] & rca_carry[i]) | (s1[i] & rca_carry[i]);
+            assign rca_sum[i]       = s0[i] ^ s1[i] ^ rca_carry_cin;
+            assign rca_carry[i+1]   = (s0[i] & s1[i]) | (s0[i] & rca_carry_cin) | (s1[i] & rca_carry_cin);
         end
     endgenerate
     // rca_carry[32] is the carry-out (discarded as per xoroshiro spec)
