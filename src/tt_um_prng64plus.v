@@ -52,6 +52,9 @@ module tt_um_xoroshiro64plus (
 
     // Serial outputs
     wire serial_out_w, valid_out_w;
+	
+	// List all unused inputs to prevent warnings
+	wire _unused = &{uio_in[7:6], 1'b0};
 
     assign uo_out[0]   = serial_out_w;
     assign uo_out[1]   = valid_out_w;
