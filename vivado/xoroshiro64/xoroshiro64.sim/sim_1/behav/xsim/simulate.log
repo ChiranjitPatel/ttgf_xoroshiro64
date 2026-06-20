@@ -1,0 +1,31 @@
+Time resolution is 1 ps
+=== xoroshiro64+ TRNG testbench ===
+
+[T1] Reset test
+     Reset released. DUT S0=DEADBEEF S1=CAFEF00D (default)
+[T2] Seed load: S0=12345678 S1=AABBCCDD
+     Seed write complete.
+[T3] Running 5 output words, comparing to reference model
+[CAP] word[0] = 0xb88f9aa5
+[CAP] word[1] = 0x0c9e4afa
+[CAP] word[2] = 0x2275bcc3
+[CAP] word[3] = 0xf452faf9
+[CAP] word[4] = 0x4cdd605c
+[T3] Captured 5 words. Checking...
+     [FAIL] word[0]: got 0xb88f9aa5, expected 0xbcf02355
+     [FAIL] word[1]: got 0x0c9e4afa, expected 0xf15f8cfc
+     [FAIL] word[2]: got 0x2275bcc3, expected 0x2475c2d3
+     [FAIL] word[3]: got 0xf452faf9, expected 0x07acfafd
+     [FAIL] word[4]: got 0x4cdd605c, expected 0xb2dd7960
+[T4] Enable gating: state should freeze when enable=0
+     Enable=0 held for 10 cycles. word_idx=5 (should be 5)
+     [PASS] PRNG paused correctly
+[T5] RO noise injection: run 2 words with ro_noise toggling
+[CAP] word[5] = 0x40432aa6
+[CAP] word[6] = 0x572cd361
+     RO noise run complete. word_idx=7
+     [PASS] New words generated with RO noise
+
+=== Results: 4 passed, 5 failed ===
+    SOME TESTS FAILED — review output above
+$finish called at time : 5320 ns : File "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus.v" Line 264

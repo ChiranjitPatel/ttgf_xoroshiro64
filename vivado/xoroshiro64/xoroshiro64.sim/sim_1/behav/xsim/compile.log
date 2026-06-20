@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
