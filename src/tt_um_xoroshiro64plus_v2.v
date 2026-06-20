@@ -14,28 +14,25 @@ module tt_um_xoroshiro64plus_v2 (
     assign uio_out = 8'h00;
     assign uio_oe  = 8'h00;
 
+    // Signal unpacking
     wire [2:0] seed_sel = uio_in[2:0];
     wire seed_wen       = uio_in[3];
     wire enable         = uio_in[4] & ena;
     wire ro_noise       = uio_in[5];
     wire [1:0] clk_sel  = uio_in[7:6];
 
-    // ====================== FPGA Ring Oscillators ======================
+    // ====================== Ring Oscillators ======================
     wire osc_50m, osc_30m;
 
     ring_osc_fpga #(.STAGES(21)) ro50 (.ena(1'b1), .osc_out(osc_50m));
     ring_osc_fpga #(.STAGES(35)) ro30 (.ena(1'b1), .osc_out(osc_30m));
 
-    // Clock mux
-    wire core_clk;
-    always @(*) begin
-        case (clk_sel)
-            2'b01:   core_clk = osc_50m;
-            2'b10:   core_clk = osc_30m;
-            default: core_clk = clk;
-        endcase
-    end
+    // ====================== Clock Mux (Fixed) ======================
+    wire core_clk = (clk_sel == 2'b01) ? osc_50m :
+                    (clk_sel == 2'b10) ? osc_30m :
+                    clk;                     // default = external clk
 
+    // Core instantiation
     wire serial_out_w, valid_out_w;
 
     xoroshiro64plus u_core (
@@ -50,6 +47,7 @@ module tt_um_xoroshiro64plus_v2 (
         .valid_out  (valid_out_w)
     );
 
+    // Outputs
     assign uo_out[0] = serial_out_w;
     assign uo_out[1] = valid_out_w;
     assign uo_out[7:2] = 6'b0;
@@ -57,7 +55,7 @@ module tt_um_xoroshiro64plus_v2 (
 endmodule
 
 
-// ====================== Behavioral Ring Oscillator for FPGA ======================
+// ====================== FPGA Ring Oscillator ======================
 module ring_osc_fpga #(
     parameter STAGES = 21
 ) (
@@ -69,7 +67,7 @@ module ring_osc_fpga #(
 
     genvar i;
     generate
-        for (i = 0; i < STAGES; i = i + 1) begin
+        for (i = 0; i < STAGES; i = i + 1) begin : ro_inv
             if (i == 0)
                 assign chain[0] = ~chain[STAGES-1] & ena;
             else

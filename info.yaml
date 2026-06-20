@@ -18,7 +18,7 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "tt_um_prng64plus.v"
-    - "xoroshiro64p_v2.v"
+    - "xoroshiro64p.v"
     - "ring_osc.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.

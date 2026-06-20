@@ -1,7 +1,8 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../../../src/tt_um_prng64plus.v" \
 "../../../../../../src/xoroshiro64p.v" \
-"../../../../../../src/tb_xoroshiro64plus.v" \
+"../../../../../../src/tb_tt_um_xoroshiro64plus.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
