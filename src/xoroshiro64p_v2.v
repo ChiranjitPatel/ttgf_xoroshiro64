@@ -1,6 +1,6 @@
 `default_nettype none
 
-module xoroshiro64plus (
+module xoroshiro64plus_v2 (
     input wire clk,
     input wire rst_n,
     input wire enable,
