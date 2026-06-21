@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../../../src/ring_osc.v" \
 "../../../../../../src/tt_um_xoroshiro64plus_v2.v" \
 "../../../../../../src/xoroshiro64p.v" \
 "../../../../../../src/tb_tt_um_xoroshiro64plus_v2.v" \

@@ -1,0 +1,37 @@
+Time resolution is 1 ps
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] PASS: seeded first word = 0xacf13568
+--- Verifying ro_noise has a real effect on state evolution ---
+[3180000] PASS: first word identical regardless of ro_noise (pre-update sum, as expected)
+[3180000] PASS: second word differs between ro_noise=0 (0xe72f7f94) and ro_noise=1 (0x662efe95) -- ro_noise is live
+--- Randomized regression on external clk path ---
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[18160000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[18260000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] PASS: seeded first word = 0xacf13568
+--- Verifying ro_noise has a real effect on state evolution ---
+[3180000] PASS: first word identical regardless of ro_noise (pre-update sum, as expected)
+[3180000] PASS: second word differs between ro_noise=0 (0xe72f7f94) and ro_noise=1 (0x662efe95) -- ro_noise is live
+--- Randomized regression on external clk path ---
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[18160000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[18260000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---

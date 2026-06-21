@@ -1,71 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1782039965">
-  <File Type="OPT-HWDEF" Name="tt_um_xoroshiro64plus_v2.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="tt_um_xoroshiro64plus_v2_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="tt_um_xoroshiro64plus_v2.dcp"/>
   <File Type="ROUTE-PWR" Name="tt_um_xoroshiro64plus_v2_power_routed.rpt"/>
   <File Type="PA-TCL" Name="tt_um_xoroshiro64plus_v2.tcl"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="tt_um_xoroshiro64plus_v2_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="tt_um_xoroshiro64plus_v2_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="tt_um_xoroshiro64plus_v2_power_summary_routed.pb"/>
-  <File Type="OPT-RQA-PB" Name="tt_um_xoroshiro64plus_v2_rqa_opted.pb"/>
   <File Type="REPORTS-TCL" Name="tt_um_xoroshiro64plus_v2_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="tt_um_xoroshiro64plus_v2_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="tt_um_xoroshiro64plus_v2_opt.dcp"/>
+  <File Type="BITSTR-MSK" Name="tt_um_xoroshiro64plus_v2.msk"/>
+  <File Type="ROUTE-CLK" Name="tt_um_xoroshiro64plus_v2_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="tt_um_xoroshiro64plus_v2.vdi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="tt_um_xoroshiro64plus_v2_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="tt_um_xoroshiro64plus_v2.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="tt_um_xoroshiro64plus_v2_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="tt_um_xoroshiro64plus_v2.bit"/>
+  <File Type="BG-DRC" Name="tt_um_xoroshiro64plus_v2.drc"/>
+  <File Type="BG-BGN" Name="tt_um_xoroshiro64plus_v2.bgn"/>
+  <File Type="BG-BIN" Name="tt_um_xoroshiro64plus_v2.bin"/>
+  <File Type="BITSTR-RBT" Name="tt_um_xoroshiro64plus_v2.rbt"/>
+  <File Type="BITSTR-NKY" Name="tt_um_xoroshiro64plus_v2.nky"/>
+  <File Type="BITSTR-BMM" Name="tt_um_xoroshiro64plus_v2_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="tt_um_xoroshiro64plus_v2.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="tt_um_xoroshiro64plus_v2.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="tt_um_xoroshiro64plus_v2.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="tt_um_xoroshiro64plus_v2_drc_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="tt_um_xoroshiro64plus_v2_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="tt_um_xoroshiro64plus_v2_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="tt_um_xoroshiro64plus_v2_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="tt_um_xoroshiro64plus_v2_placed.dcp"/>
+  <File Type="OPT-HWDEF" Name="tt_um_xoroshiro64plus_v2.hwdef"/>
   <File Type="PLACE-IO" Name="tt_um_xoroshiro64plus_v2_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="tt_um_xoroshiro64plus_v2_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="tt_um_xoroshiro64plus_v2_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="tt_um_xoroshiro64plus_v2_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="tt_um_xoroshiro64plus_v2_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="tt_um_xoroshiro64plus_v2_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="tt_um_xoroshiro64plus_v2_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="tt_um_xoroshiro64plus_v2.bin"/>
-  <File Type="PLACE-TIMING" Name="tt_um_xoroshiro64plus_v2_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="tt_um_xoroshiro64plus_v2_power_routed.rpx"/>
-  <File Type="PLACE-RQA-PB" Name="tt_um_xoroshiro64plus_v2_rqa_placed.pb"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="tt_um_xoroshiro64plus_v2_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="tt_um_xoroshiro64plus_v2.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="tt_um_xoroshiro64plus_v2_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="tt_um_xoroshiro64plus_v2_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="tt_um_xoroshiro64plus_v2_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="tt_um_xoroshiro64plus_v2.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="tt_um_xoroshiro64plus_v2_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="tt_um_xoroshiro64plus_v2_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="tt_um_xoroshiro64plus_v2_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="tt_um_xoroshiro64plus_v2_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="tt_um_xoroshiro64plus_v2_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="tt_um_xoroshiro64plus_v2_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="tt_um_xoroshiro64plus_v2_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="tt_um_xoroshiro64plus_v2_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="tt_um_xoroshiro64plus_v2_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="tt_um_xoroshiro64plus_v2_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-RQS-PB" Name="tt_um_xoroshiro64plus_v2_rqs_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="tt_um_xoroshiro64plus_v2_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="tt_um_xoroshiro64plus_v2_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="tt_um_xoroshiro64plus_v2_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="tt_um_xoroshiro64plus_v2_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="tt_um_xoroshiro64plus_v2_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="tt_um_xoroshiro64plus_v2_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="tt_um_xoroshiro64plus_v2_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="tt_um_xoroshiro64plus_v2_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="tt_um_xoroshiro64plus_v2_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="tt_um_xoroshiro64plus_v2_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="tt_um_xoroshiro64plus_v2_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="tt_um_xoroshiro64plus_v2_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="tt_um_xoroshiro64plus_v2_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="tt_um_xoroshiro64plus_v2_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="tt_um_xoroshiro64plus_v2_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="tt_um_xoroshiro64plus_v2_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="tt_um_xoroshiro64plus_v2_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="tt_um_xoroshiro64plus_v2_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="tt_um_xoroshiro64plus_v2_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="tt_um_xoroshiro64plus_v2_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="tt_um_xoroshiro64plus_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="tt_um_xoroshiro64plus_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="tt_um_xoroshiro64plus_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="tt_um_xoroshiro64plus_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="tt_um_xoroshiro64plus_v2.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="tt_um_xoroshiro64plus_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="tt_um_xoroshiro64plus_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="tt_um_xoroshiro64plus_v2.nky"/>
-  <File Type="BITSTR-BMM" Name="tt_um_xoroshiro64plus_v2_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="tt_um_xoroshiro64plus_v2.mmi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="tt_um_xoroshiro64plus_v2_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="tt_um_xoroshiro64plus_v2_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="tt_um_xoroshiro64plus_v2_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="tt_um_xoroshiro64plus_v2_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="tt_um_xoroshiro64plus_v2_bus_skew_postroute_physopted.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="tt_um_xoroshiro64plus_v2_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="tt_um_xoroshiro64plus_v2_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="tt_um_xoroshiro64plus_v2_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="tt_um_xoroshiro64plus_v2_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="tt_um_xoroshiro64plus_v2.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="tt_um_xoroshiro64plus_v2_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="tt_um_xoroshiro64plus_v2_pld.pdi"/>
@@ -74,13 +67,6 @@
   <File Type="RNPI_FILE" Name="tt_um_xoroshiro64plus_v2.rnpi"/>
   <File Type="NPI_FILE" Name="tt_um_xoroshiro64plus_v2.npi"/>
   <File Type="RBD_FILE" Name="tt_um_xoroshiro64plus_v2.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="tt_um_xoroshiro64plus_v2.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="tt_um_xoroshiro64plus_v2.sysdef"/>
-  <File Type="BG-BGN" Name="tt_um_xoroshiro64plus_v2.bgn"/>
-  <File Type="BG-DRC" Name="tt_um_xoroshiro64plus_v2.drc"/>
-  <File Type="RDI-RDI" Name="tt_um_xoroshiro64plus_v2.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="tt_um_xoroshiro64plus_v2_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="tt_um_xoroshiro64plus_v2_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -145,5 +131,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

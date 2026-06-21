@@ -13,9 +13,9 @@
 // NOT actually oscillate. Because NOT(X) = X and X & 1'b1 = X in 4-state
 // Verilog, the ring reaches a stable fixed point of all-X within the first
 // few delta cycles at time 0 and then never changes again. The practical
-// effect: whenever clk_sel selects osc_50m or osc_30m, core_clk becomes a
+// effect: whenever clk_sel selects osc_20m or osc_10m, core_clk becomes a
 // constant X and the xoroshiro64plus core simply freezes (no posedge ever
-// fires), rather than the RO genuinely toggling at ~50MHz/~30MHz.
+// fires), rather than the RO genuinely toggling at ~20MHz/~10MHz.
 //
 // This is a known limitation of untimed RTL/behavioral simulation for
 // self-oscillating loops, not a DUT bug -- on real silicon, real gate
@@ -24,19 +24,26 @@
 // outside the scope of an RTL testbench.
 //
 // This testbench therefore does two separate things for the RO paths:
-//   1) Test F: explicitly confirms/documents the X-freeze behavior above,
+//   1) Test G: explicitly confirms/documents the X-freeze behavior above,
 //      so a future simulator/tool change that alters this is visible.
-//   2) Test G: uses `force`/`release` on the hierarchical RO output nets
-//      (dut.osc_50m / dut.osc_30m) to inject a clean synthetic clock
+//   2) Test H: uses `force`/`release` on the hierarchical RO output nets
+//      (dut.osc_20m / dut.osc_10m) to inject a clean synthetic clock
 //      standing in for "RO is actually oscillating" and confirms the
 //      clock MUX and downstream core logic work correctly through that
 //      path. This validates the mux/wiring/core, NOT the RO's real
 //      analog behavior.
 //
-// All other functional verification (seeding, enable gating, serializer
-// framing) uses clk_sel=00 (external clk), backed by a bit-exact golden
-// RTL twin of the xoroshiro64plus core that runs in lockstep with the DUT
-// and is compared every cycle.
+// All other functional verification (seeding, enable gating, ro_noise
+// injection, serializer framing) uses clk_sel=00 (external clk), backed
+// by a bit-exact golden RTL twin of the xoroshiro64plus core that runs in
+// lockstep with the DUT and is compared every cycle.
+//
+// NOTE: dut.osc_20m / dut.osc_10m are hierarchical references into the
+// DUT's internal wires. If your tt_um_xoroshiro64plus_v2.v top module
+// still names these osc_50m / osc_30m (as in the version reviewed
+// earlier in this thread), this testbench will fail to elaborate --
+// rename the wires/instances in the DUT to match, or rename them back
+// here, so the two stay in sync.
 //==============================================================================
 
 module tb_tt_um_xoroshiro64plus_v2;
@@ -75,14 +82,14 @@ module tb_tt_um_xoroshiro64plus_v2;
     always #(CLK_PERIOD/2) clk = ~clk;
 
     // ------------------------------------------------------------
-    // Synthetic stand-in oscillators for forced-clock RO tests (Test G).
+    // Synthetic stand-in oscillators for forced-clock RO tests (Test H).
     // Nominal periods only -- NOT a model of real RO frequency/jitter.
     // ------------------------------------------------------------
-    reg osc50_gen, osc30_gen;
-    initial osc50_gen = 1'b0;
-    initial osc30_gen = 1'b0;
-    always #10   osc50_gen = ~osc50_gen; // ~50MHz stand-in (20ns period)
-    always #16.7 osc30_gen = ~osc30_gen; // ~30MHz stand-in (33.4ns period)
+    reg osc20_gen, osc10_gen;
+    initial osc20_gen = 1'b0;
+    initial osc10_gen = 1'b0;
+    always #25 osc20_gen = ~osc20_gen; // ~20MHz stand-in (50ns period)
+    always #50 osc10_gen = ~osc10_gen; // ~10MHz stand-in (100ns period)
 
     // ------------------------------------------------------------
     // Waveform dump
@@ -106,7 +113,9 @@ module tb_tt_um_xoroshiro64plus_v2;
     // clocked by the same `clk` used by the DUT when clk_sel=00.
     // Only meaningful while clk_sel=00; comparisons are gated by
     // `checking_enabled`, which test phases turn off before switching
-    // to an RO clk_sel.
+    // to an RO clk_sel. g_ro_noise tracks uio_in[5] live, so any
+    // ro_noise sequence (held, toggled, random) is checked bit-exact
+    // against the DUT automatically whenever checking_enabled is set.
     //==============================================================
     reg [31:0] g_s0, g_s1, g_shift;
     reg [5:0]  g_bit_cnt;
@@ -232,24 +241,24 @@ module tb_tt_um_xoroshiro64plus_v2;
     endtask
 
     // Captures a 32-bit word synced to one of the forced synthetic RO
-    // clocks instead of `clk`. which: 0 = osc50_gen, 1 = osc30_gen.
+    // clocks instead of `clk`. which: 0 = osc20_gen, 1 = osc10_gen.
     task capture_one_word_ro(input integer which, output reg [31:0] word_out);
         integer i;
         begin
             if (which == 0) begin
-                @(negedge osc50_gen);
-                while (valid_out !== 1'b1) @(negedge osc50_gen);
+                @(negedge osc20_gen);
+                while (valid_out !== 1'b1) @(negedge osc20_gen);
                 word_out[31] = serial_out;
                 for (i = 30; i >= 0; i = i - 1) begin
-                    @(negedge osc50_gen);
+                    @(negedge osc20_gen);
                     word_out[i] = serial_out;
                 end
             end else begin
-                @(negedge osc30_gen);
-                while (valid_out !== 1'b1) @(negedge osc30_gen);
+                @(negedge osc10_gen);
+                while (valid_out !== 1'b1) @(negedge osc10_gen);
                 word_out[31] = serial_out;
                 for (i = 30; i >= 0; i = i - 1) begin
-                    @(negedge osc30_gen);
+                    @(negedge osc10_gen);
                     word_out[i] = serial_out;
                 end
             end
@@ -261,6 +270,8 @@ module tb_tt_um_xoroshiro64plus_v2;
     //==============================================================
     reg [31:0] word0, word1, word_ro;
     reg [31:0] expected0, expected1;
+    reg [31:0] word_rn0_first, word_rn0_second;
+    reg [31:0] word_rn1_first, word_rn1_second;
     integer    pass_count, fail_count;
     integer    k;
     reg [63:0] rand_seed;
@@ -317,13 +328,13 @@ module tb_tt_um_xoroshiro64plus_v2;
         // ---------------- Test D: known seed ----------------
         uio_in[4] = 1'b0;
         do_reset;
-        load_seed(64'h0000_0002_0000_0001); // s1=2, s0=1
+        load_seed(64'h1234_5678_9abc_def0);
         ena       = 1'b1;
         uio_in[4] = 1'b1;
         capture_one_word(word1);
-        expected1 = 32'h1 + 32'h2;
+        expected1 = 32'h9abcdef0 + 32'h12345678;
         if (word1 === expected1) begin
-            $display("[%0t] PASS: seeded(s0=1,s1=2) first word = 0x%08h", $time, word1);
+            $display("[%0t] PASS: seeded first word = 0x%08h", $time, word1);
             pass_count = pass_count + 1;
         end else begin
             $display("[%0t] FAIL: seeded first word = 0x%08h, expected 0x%08h",
@@ -331,7 +342,57 @@ module tb_tt_um_xoroshiro64plus_v2;
             fail_count = fail_count + 1;
         end
 
-        // ---------------- Test E: randomized regression (clk_sel=00) ----------------
+        // ---------------- Test E: ro_noise actually perturbs PRNG state ----------------
+        // ro_noise is XORed into s0[0] on every enabled cycle (not just once
+        // per word), so its effect should already show up by the SECOND
+        // emitted word (the first word is just the pre-update seed sum and
+        // is unaffected by ro_noise). This is a directed, independent check
+        // on top of the golden-model comparator (which is still running and
+        // will also catch any DUT/spec mismatch bit-exactly).
+        $display("--- Verifying ro_noise has a real effect on state evolution ---");
+        uio_in[4] = 1'b0;
+        do_reset;
+        load_seed(64'h1234_5678_9abc_def0);
+        uio_in[5] = 1'b0; // ro_noise = 0, held
+        ena       = 1'b1;
+        uio_in[4] = 1'b1;
+        capture_one_word(word_rn0_first);
+        capture_one_word(word_rn0_second);
+
+        uio_in[4] = 1'b0;
+        do_reset;
+        load_seed(64'h1234_5678_9abc_def0); // same seed
+        uio_in[5] = 1'b1; // ro_noise = 1, held
+        ena       = 1'b1;
+        uio_in[4] = 1'b1;
+        capture_one_word(word_rn1_first);
+        capture_one_word(word_rn1_second);
+
+        if (word_rn0_first === word_rn1_first) begin
+            $display("[%0t] PASS: first word identical regardless of ro_noise (pre-update sum, as expected)",
+                       $time);
+            pass_count = pass_count + 1;
+        end else begin
+            $display("[%0t] FAIL: first word differs with ro_noise alone (should be identical pre-update): rn0=0x%08h rn1=0x%08h",
+                       $time, word_rn0_first, word_rn1_first);
+            fail_count = fail_count + 1;
+        end
+
+        if (word_rn0_second !== word_rn1_second) begin
+            $display("[%0t] PASS: second word differs between ro_noise=0 (0x%08h) and ro_noise=1 (0x%08h) -- ro_noise is live",
+                       $time, word_rn0_second, word_rn1_second);
+            pass_count = pass_count + 1;
+        end else begin
+            $display("[%0t] FAIL: second word identical (0x%08h) regardless of ro_noise -- ro_noise appears to have no effect",
+                       $time, word_rn0_second);
+            fail_count = fail_count + 1;
+        end
+
+        uio_in[5] = 1'b0; // restore ro_noise=0 default
+        uio_in[4] = 1'b0;
+        ena       = 1'b0;
+
+        // ---------------- Test F: randomized regression (clk_sel=00) ----------------
         $display("--- Randomized regression on external clk path ---");
         for (k = 0; k < 15; k = k + 1) begin
             uio_in[4] = 1'b0;
@@ -348,32 +409,33 @@ module tb_tt_um_xoroshiro64plus_v2;
             end
         end
         uio_in[4] = 1'b0;
+        uio_in[5] = 1'b0;
         repeat (20) @(negedge clk);
         checking_enabled = 0; // stop golden compare before touching clk_sel
 
-        // ---------------- Test F: RO clk_sel freezes to X (documented) ----------------
+        // ---------------- Test G: RO clk_sel freezes to X (documented) ----------------
         $display("--- RO clk_sel paths: confirming documented X-freeze behavior ---");
         do_reset;
-        uio_in[7:6] = 2'b01; // select osc_50m, unforced
+        uio_in[7:6] = 2'b01; // select osc_20m, unforced
         uio_in[4]   = 1'b1;
         ena         = 1'b1;
         repeat (10) @(negedge clk); // external clk still ticks the TB, core_clk does not
-        if ((dut.core_clk === 1'bx) && (dut.osc_50m === 1'bx)) begin
-            $display("[%0t] PASS (expected): core_clk/osc_50m settled to X with clk_sel=01 (untimed RO, no SDF)",
+        if ((dut.core_clk === 1'bx) && (dut.osc_20m === 1'bx)) begin
+            $display("[%0t] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)",
                        $time);
             pass_count = pass_count + 1;
         end else begin
-            $display("[%0t] INFO: core_clk=%b osc_50m=%b with clk_sel=01 (differs from previously observed X-settle; simulator/tool dependent)",
-                       $time, dut.core_clk, dut.osc_50m);
+            $display("[%0t] INFO: core_clk=%b osc_20m=%b with clk_sel=01 (differs from previously observed X-settle; simulator/tool dependent)",
+                       $time, dut.core_clk, dut.osc_20m);
         end
 
-        uio_in[7:6] = 2'b10; // select osc_30m, unforced
+        uio_in[7:6] = 2'b10; // select osc_10m, unforced
         repeat (10) @(negedge clk);
-        if ((dut.core_clk === 1'bx) && (dut.osc_30m === 1'bx)) begin
-            $display("[%0t] PASS (expected): core_clk/osc_30m settled to X with clk_sel=10", $time);
+        if ((dut.core_clk === 1'bx) && (dut.osc_10m === 1'bx)) begin
+            $display("[%0t] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10", $time);
             pass_count = pass_count + 1;
         end else begin
-            $display("[%0t] INFO: core_clk=%b osc_30m=%b with clk_sel=10", $time, dut.core_clk, dut.osc_30m);
+            $display("[%0t] INFO: core_clk=%b osc_10m=%b with clk_sel=10", $time, dut.core_clk, dut.osc_10m);
         end
 
         uio_in[7:6] = 2'b00; // back to external clk
@@ -381,49 +443,49 @@ module tb_tt_um_xoroshiro64plus_v2;
         ena         = 1'b0;
         repeat (5) @(negedge clk);
 
-        // ---------------- Test G: forced synthetic RO clock - mux/core function ----------------
+        // ---------------- Test H: forced synthetic RO clock - mux/core function ----------------
         $display("--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---");
 
-        // osc_50m path
+        // osc_20m path
         do_reset;
-        load_seed(64'h0000_0002_0000_0001); // s1=2, s0=1
-        uio_in[7:6] = 2'b01; // select osc_50m
-        force dut.osc_50m = osc50_gen;
+        load_seed(64'h1234_5678_9abc_def0);
+        uio_in[7:6] = 2'b01; // select osc_20m
+        force dut.osc_20m = osc20_gen;
         ena         = 1'b1;
         uio_in[4]   = 1'b1;
         capture_one_word_ro(0, word_ro);
         if (word_ro === expected1) begin
-            $display("[%0t] PASS: osc_50m mux path functional, first word = 0x%08h", $time, word_ro);
+            $display("[%0t] PASS: osc_20m mux path functional, first word = 0x%08h", $time, word_ro);
             pass_count = pass_count + 1;
         end else begin
-            $display("[%0t] FAIL: osc_50m mux path first word = 0x%08h, expected 0x%08h",
+            $display("[%0t] FAIL: osc_20m mux path first word = 0x%08h, expected 0x%08h",
                        $time, word_ro, expected1);
             fail_count = fail_count + 1;
         end
         uio_in[4] = 1'b0;
         ena       = 1'b0;
-        release dut.osc_50m;
+        release dut.osc_20m;
 
-        // osc_30m path
+        // osc_10m path
         uio_in[7:6] = 2'b00;
         do_reset;
-        load_seed(64'h0000_0002_0000_0001); // s1=2, s0=1
-        uio_in[7:6] = 2'b10; // select osc_30m
-        force dut.osc_30m = osc30_gen;
+        load_seed(64'h1234_5678_9abc_def0);
+        uio_in[7:6] = 2'b10; // select osc_10m
+        force dut.osc_10m = osc10_gen;
         ena         = 1'b1;
         uio_in[4]   = 1'b1;
         capture_one_word_ro(1, word_ro);
         if (word_ro === expected1) begin
-            $display("[%0t] PASS: osc_30m mux path functional, first word = 0x%08h", $time, word_ro);
+            $display("[%0t] PASS: osc_10m mux path functional, first word = 0x%08h", $time, word_ro);
             pass_count = pass_count + 1;
         end else begin
-            $display("[%0t] FAIL: osc_30m mux path first word = 0x%08h, expected 0x%08h",
+            $display("[%0t] FAIL: osc_10m mux path first word = 0x%08h, expected 0x%08h",
                        $time, word_ro, expected1);
             fail_count = fail_count + 1;
         end
         uio_in[4] = 1'b0;
         ena       = 1'b0;
-        release dut.osc_30m;
+        release dut.osc_10m;
         uio_in[7:6] = 2'b00; // restore external clk for cleanliness
 
         // ---------------- Summary ----------------

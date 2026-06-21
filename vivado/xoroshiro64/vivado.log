@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sun Jun 21 16:25:02 2026
-# Process ID: 4964
+# Start of session at: Sun Jun 21 21:42:45 2026
+# Process ID: 3680
 # Current directory: D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13924 D:\Github\ttgf_xoroshiro64\vivado\xoroshiro64\xoroshiro64.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26896 D:\Github\ttgf_xoroshiro64\vivado\xoroshiro64\xoroshiro64.xpr
 # Log file: D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/vivado.log
 # Journal file: D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64\vivado.jou
 # Running On        :GHOST
@@ -19,7 +19,7 @@
 # Host memory       :17041 MB
 # Swap memory       :7247 MB
 # Total Virtual     :24289 MB
-# Available Virtual :16048 MB
+# Available Virtual :11835 MB
 #-----------------------------------------------------------
 start_gui
 open_project D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.xpr
@@ -90,211 +90,83 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:44 ; elapsed = 00:00:39 . Memory (MB): peak = 1476.082 ; gain = 422.074
+open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1522.027 ; gain = 453.672
 update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v
-update_compile_order -fileset sim_1
-set_property top tb_tt_um_xoroshiro64plus_v2 [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
-set_property top tt_um_xoroshiro64plus_v2 [current_fileset]
-update_compile_order -fileset sources_1
-synth_design -top tt_um_xoroshiro64plus_v2 -part xc7k70tfbv676-1 -lint 
-Command: synth_design -top tt_um_xoroshiro64plus_v2 -part xc7k70tfbv676-1 -lint
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
-INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13028
----------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1979.602 ; gain = 431.066
----------------------------------------------------------------------------------
-Clean up Linter database...
-INFO: [Synth 8-6157] synthesizing module 'tt_um_xoroshiro64plus_v2' [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ring_osc_fpga' [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:59]
-	Parameter STAGES bound to: 21 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ring_osc_fpga' (1#1) [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:59]
-INFO: [Synth 8-6157] synthesizing module 'ring_osc_fpga__parameterized0' [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:59]
-	Parameter STAGES bound to: 35 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ring_osc_fpga__parameterized0' (1#1) [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:59]
-INFO: [Synth 8-6157] synthesizing module 'xoroshiro64plus' [D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v:186]
-INFO: [Synth 8-6155] done synthesizing module 'xoroshiro64plus' (2#1) [D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v:186]
-INFO: [Synth 8-6155] done synthesizing module 'tt_um_xoroshiro64plus_v2' (3#1) [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:3]
----------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2088.410 ; gain = 539.875
----------------------------------------------------------------------------------
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Sun Jun 21 16:31:34 2026
-| Host         : GHOST running 64-bit major release  (build 9200)
----------------------------------------------------------------------------------------------------------------------------------------------
-
-RTL Linter Report
-
-Table of Contents
------------------
-1. Summary
-
-1. Summary
-----------
-
-+----------+----------+--------------+----------+
-| Rule ID  | Severity | # Violations | # Waived |
-+----------+----------+--------------+----------+
-| ASSIGN-6 | WARNING  | 1            | 0        |
-+----------+----------+--------------+----------+
-
-
-WARNING: [Synth 37-123] [ASSIGN-6]Some bits in 'rca_carry' are not read. First unread bit index is 32. 
-RTL Name 'rca_carry', Hierarchy 'xoroshiro64plus', File 'xoroshiro64p.v', Line 207.
-INFO: [Synth 37-85] Total of 1 linter message(s) generated.
-INFO: [Synth 37-45] Linter Run Finished!
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2088.410 ; gain = 539.875
-INFO: [Common 17-83] Releasing license: Synthesis
-15 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2088.410 ; gain = 539.875
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
-Starting synth_design
-Using part: xc7k70tfbv676-1
-Top: tt_um_xoroshiro64plus_v2
-INFO: [Device 21-403] Loading part xc7k70tfbv676-1
-INFO: [Device 21-9227] Part: xc7k70tfbv676-1 does not have CEAM library.
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2373.109 ; gain = 131.480
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'tt_um_xoroshiro64plus_v2' [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ring_osc_fpga' [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:59]
-	Parameter STAGES bound to: 21 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ring_osc_fpga' (0#1) [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:59]
-INFO: [Synth 8-6157] synthesizing module 'ring_osc_fpga__parameterized0' [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:59]
-	Parameter STAGES bound to: 35 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ring_osc_fpga__parameterized0' (0#1) [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:59]
-INFO: [Synth 8-6157] synthesizing module 'xoroshiro64plus' [D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v:186]
-INFO: [Synth 8-6155] done synthesizing module 'xoroshiro64plus' (0#1) [D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v:186]
-INFO: [Synth 8-6155] done synthesizing module 'tt_um_xoroshiro64plus_v2' (0#1) [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:3]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2480.008 ; gain = 238.379
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2480.008 ; gain = 238.379
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2480.008 ; gain = 238.379
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2480.008 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2573.195 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-RTL Elaboration Complete:  : Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 2617.004 ; gain = 375.375
-13 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2617.004 ; gain = 528.594
-launch_runs synth_1 -jobs 4
-WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
-[Sun Jun 21 16:34:29 2026] Launched synth_1...
-Run output will be captured here: D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.runs/synth_1/runme.log
-close_design
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7k70tfbv676-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2649.328 ; gain = 0.000
-INFO: [Project 1-479] Netlist was created with Vivado 2024.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2649.328 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2649.328 ; gain = 0.000
-launch_runs impl_1 -jobs 4
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2960.883 ; gain = 0.000
-[Sun Jun 21 16:36:05 2026] Launched impl_1...
-Run output will be captured here: D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.runs/impl_1/runme.log
-close_design
-open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2960.883 ; gain = 0.000
-INFO: [Project 1-479] Netlist was created with Vivado 2024.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2960.883 ; gain = 0.000
-INFO: [Designutils 20-5722] Start Reading Physical Databases.
-Reading placement.
-Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2960.883 ; gain = 0.000
-Reading placer database...
-Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2960.883 ; gain = 0.000
-Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2960.883 ; gain = 0.000
-Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2960.883 ; gain = 0.000
-Reading routing.
-Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 2960.883 ; gain = 0.000
-Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.146 . Memory (MB): peak = 2960.883 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.147 . Memory (MB): peak = 2960.883 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2960.883 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2960.883 ; gain = 0.000
-WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
-launch_simulation -mode post-implementation -type functional
-Command: launch_simulation  -mode post-implementation -type functional
+launch_simulation
+Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching post-implementation functional simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/impl/func/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
-INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
-INFO: [SIM-utils-32] write_verilog -mode funcsim -nolib -force -file "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/impl/func/xsim/tb_tt_um_xoroshiro64plus_v2_func_impl.v"
-INFO: [SIM-utils-36] Netlist generated:D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/impl/func/xsim/tb_tt_um_xoroshiro64plus_v2_func_impl.v
 INFO: [SIM-utils-54] Inspecting design source files for 'tb_tt_um_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/impl/func/xsim'
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_v2_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/impl/func/xsim/tb_tt_um_xoroshiro64plus_v2_func_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ring_osc_fpga
-INFO: [VRFC 10-311] analyzing module ring_osc_fpga__parameterized0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module xoroshiro64plus
-INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus_v2
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2960.883 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '9' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/impl/func/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_func_impl xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator v2024.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_func_impl xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:361]
-ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:367]
-ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:391]
-ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:405]
+ERROR: [VRFC 10-2063] Module <ring_osc> not found while processing module instance <ro20> [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:27]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2960.957 ; gain = 0.074
-INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
-INFO: [USF-XSim-99] Step results log file:'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/impl/func/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/impl/func/xsim/elaborate.log' file for more information.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log' file for more information.
 ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:19 . Memory (MB): peak = 2960.957 ; gain = 0.074
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1530.934 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+add_files -norecurse D:/Github/ttgf_xoroshiro64/src/ring_osc.v
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_tt_um_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GF_inverter
+INFO: [VRFC 10-311] analyzing module ring_osc
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <gf180mcu_fd_sc_mcu7t5v0__inv_1> not found while processing module instance <gf180mcu_inverter> [D:/Github/ttgf_xoroshiro64/src/ring_osc.v:93]
+ERROR: [VRFC 10-8530] module 'ring_osc(STAGES=97)' is ignored due to previous errors [D:/Github/ttgf_xoroshiro64/src/ring_osc.v:100]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1559.109 ; gain = 0.000
 ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
 launch_simulation
 Command: launch_simulation 
@@ -309,6 +181,59 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_osc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:361]
+ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:367]
+ERROR: [VRFC 10-2991] 'osc_30m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:372]
+ERROR: [VRFC 10-2991] 'osc_30m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:376]
+ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:391]
+ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:405]
+ERROR: [VRFC 10-2991] 'osc_30m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:412]
+ERROR: [VRFC 10-2991] 'osc_30m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:426]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1576.566 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_tt_um_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_osc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus_v2
 INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
@@ -325,24 +250,24 @@ Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 59. Module ring_osc_fpga_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 59. Module ring_osc_fpga(STAGES=35) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 59. Module ring_osc_fpga_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 59. Module ring_osc_fpga(STAGES=35) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ring_osc_fpga_default
-Compiling module xil_defaultlib.ring_osc_fpga(STAGES=35)
+Compiling module xil_defaultlib.ring_osc(STAGES=53)
+Compiling module xil_defaultlib.ring_osc(STAGES=97)
 Compiling module xil_defaultlib.xoroshiro64plus
 Compiling module xil_defaultlib.tt_um_xoroshiro64plus_v2
 Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus_v2
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_tt_um_xoroshiro64plus_v2_behav
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 2994.430 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1576.566 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -350,61 +275,16 @@ INFO: [USF-XSim-98] *** Running xsim
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
 open_wave_config D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/tb_xoroshiro64plus_v3_behav.wcfg
-WARNING: Simulation object /tb_xoroshiro64plus_v3/clk was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/rst_n was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/enable was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/ro_noise was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/seed_data was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/seed_wen was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/seed_sel was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/serial_out was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/valid_out was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_s0 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_s1 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_shift was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_bit_cnt was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_valid was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_seed_s1_sel was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_seed_byte was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_rca_sum was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_s0_next was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_s0_rotl26 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_s1_next was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/g_serial_out was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/check_count was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/error_count was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/checking_enabled was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/word0 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/word1 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/word2 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/expected0 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/expected1 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/pass_count was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/fail_count was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/k was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/rand_seed was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/CLK_PERIOD was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/clk was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/rst_n was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/enable was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/ro_noise was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/seed_data was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/seed_wen was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/seed_sel was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/serial_out was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/valid_out was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/s0 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/s1 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/output_reg was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/shift_reg was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/bit_cnt was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/seed_s1_sel was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/seed_byte was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/rca_sum was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/carry was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/s0_next was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/s0_rotl26 was not found in the design.
-WARNING: Simulation object /tb_xoroshiro64plus_v3/dut/s1_next was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/ro50/ena was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/ro50/osc_out was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/ro50/chain was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/ro50/STAGES was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/ro30/ena was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/ro30/osc_out was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/ro30/chain was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/ro30/STAGES was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/osc_50m was not found in the design.
+WARNING: Simulation object /tb_tt_um_xoroshiro64plus_v2/dut/osc_30m was not found in the design.
 source tb_tt_um_xoroshiro64plus_v2.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -422,98 +302,487 @@ source tb_tt_um_xoroshiro64plus_v2.tcl
 [70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
 [390000] PASS: default-seed first word = 0xa9acaefc
 [890000] PASS: core stays idle while ena=0
-xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3019.488 ; gain = 25.059
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1600.164 ; gain = 23.598
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_tt_um_xoroshiro64plus_v2_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 3019.488 ; gain = 25.059
-restart
-INFO: [Wavedata 42-604] Simulation restarted
-current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
-tb_xoroshiro64plus_v3_behav.wcfg
-add_wave {{/tb_tt_um_xoroshiro64plus_v2}} 
-current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
-tb_xoroshiro64plus_v3_behav.wcfg
-add_wave {{/tb_tt_um_xoroshiro64plus_v2/dut}} 
-run 1 us
-================================================================
- Starting tb_tt_um_xoroshiro64plus_v2
-================================================================
-[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
-[390000] PASS: default-seed first word = 0xa9acaefc
-[890000] PASS: core stays idle while ena=0
-run 1 us
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1600.164 ; gain = 23.598
+run 5 us
 [1440000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
 --- Randomized regression on external clk path ---
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
-run 1 us
+run 5 us
+run 5 us
+run 5 us
 --- RO clk_sel paths: confirming documented X-freeze behavior ---
-[16420000] PASS (expected): core_clk/osc_50m settled to X with clk_sel=01 (untimed RO, no SDF)
-[16520000] PASS (expected): core_clk/osc_30m settled to X with clk_sel=10
+[16420000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[16520000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
 --- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
-run 1 us
-[17440000] PASS: osc_50m mux path functional, first word = 0x00000003
-run 1 us
-[18737000] PASS: osc_30m mux path functional, first word = 0x00000003
+[17440000] PASS: osc_20m mux path functional, first word = 0x00000003
+[18737000] PASS: osc_10m mux path functional, first word = 0x00000003
 ================================================================
  Golden-model live compare (clk_sel=00 only): 1619 cycles checked, 0 mismatches
  Directed/RO tests: 8 PASSED, 0 FAILED
  RESULT: ALL TESTS PASSED
 ================================================================
 $finish called at time : 18737400 ps : File "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" Line 440
-run 1 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
+run 5 us
 run 5 us
 restart
 INFO: [Wavedata 42-604] Simulation restarted
-current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
-tb_xoroshiro64plus_v3_behav.wcfg
-add_wave {{/tb_tt_um_xoroshiro64plus_v2/dut/ro50}} 
-current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
-tb_xoroshiro64plus_v3_behav.wcfg
-add_wave {{/tb_tt_um_xoroshiro64plus_v2/dut/ro30}} 
+run 5 us
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+--- Randomized regression on external clk path ---
+run 20 us
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[16420000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[16520000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
+[17440000] PASS: osc_20m mux path functional, first word = 0x00000003
+[18737000] PASS: osc_10m mux path functional, first word = 0x00000003
+================================================================
+ Golden-model live compare (clk_sel=00 only): 1619 cycles checked, 0 mismatches
+ Directed/RO tests: 8 PASSED, 0 FAILED
+ RESULT: ALL TESTS PASSED
+================================================================
+$finish called at time : 18737400 ps : File "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" Line 440
+run 20 us
+run 20 us
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20 us
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+--- Randomized regression on external clk path ---
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[16420000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[16520000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
+[17440000] PASS: osc_20m mux path functional, first word = 0x00000003
+[18737000] PASS: osc_10m mux path functional, first word = 0x00000003
+================================================================
+ Golden-model live compare (clk_sel=00 only): 1619 cycles checked, 0 mismatches
+ Directed/RO tests: 8 PASSED, 0 FAILED
+ RESULT: ALL TESTS PASSED
+================================================================
+$finish called at time : 18737400 ps : File "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" Line 440
 current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
 tb_xoroshiro64plus_v3_behav.wcfg
 add_wave {{/tb_tt_um_xoroshiro64plus_v2/dut/u_core}} 
 current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
 tb_xoroshiro64plus_v3_behav.wcfg
-add_wave {{/tb_tt_um_xoroshiro64plus_v2/dut}} 
-current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
-tb_xoroshiro64plus_v3_behav.wcfg
-add_wave {{/tb_tt_um_xoroshiro64plus_v2}} 
-run 5 us
+add_wave {{/tb_tt_um_xoroshiro64plus_v2/dut/ui_in}} 
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_tt_um_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_osc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ring_osc(STAGES=53)
+Compiling module xil_defaultlib.ring_osc(STAGES=97)
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_v2_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2668.312 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2668.312 ; gain = 0.000
+Time resolution is 1 ps
 ================================================================
  Starting tb_tt_um_xoroshiro64plus_v2
 ================================================================
 [70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
 [390000] PASS: default-seed first word = 0xa9acaefc
 [890000] PASS: core stays idle while ena=0
-[1440000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 2668.312 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20 us
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] FAIL: seeded first word = 0xacf13568, expected 0x00000003
 --- Randomized regression on external clk path ---
-run 5 us
-run 5 us
-run 5 us
 --- RO clk_sel paths: confirming documented X-freeze behavior ---
-[16420000] PASS (expected): core_clk/osc_50m settled to X with clk_sel=01 (untimed RO, no SDF)
-[16520000] PASS (expected): core_clk/osc_30m settled to X with clk_sel=10
+[16420000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[16520000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
 --- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
-[17440000] PASS: osc_50m mux path functional, first word = 0x00000003
-[18737000] PASS: osc_30m mux path functional, first word = 0x00000003
+[17440000] PASS: osc_20m mux path functional, first word = 0x00000003
+[18737000] PASS: osc_10m mux path functional, first word = 0x00000003
 ================================================================
  Golden-model live compare (clk_sel=00 only): 1619 cycles checked, 0 mismatches
- Directed/RO tests: 8 PASSED, 0 FAILED
- RESULT: ALL TESTS PASSED
+ Directed/RO tests: 7 PASSED, 1 FAILED
+ RESULT: TESTS FAILED
 ================================================================
 $finish called at time : 18737400 ps : File "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" Line 440
-run 5 us
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_osc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ring_osc(STAGES=53)
+Compiling module xil_defaultlib.ring_osc(STAGES=97)
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_v2_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2668.312 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2668.312 ; gain = 0.000
+Time resolution is 1 ps
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 2668.312 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20 us
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] FAIL: seeded first word = 0xacf13568, expected 0x00000003
+--- Randomized regression on external clk path ---
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[16420000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[16520000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
+[17440000] FAIL: osc_20m mux path first word = 0xacf13568, expected 0x00000003
+[18737000] FAIL: osc_10m mux path first word = 0xacf13568, expected 0x00000003
+================================================================
+ Golden-model live compare (clk_sel=00 only): 1619 cycles checked, 0 mismatches
+ Directed/RO tests: 5 PASSED, 3 FAILED
+ RESULT: TESTS FAILED
+================================================================
+$finish called at time : 18737400 ps : File "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" Line 440
+current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
+tb_xoroshiro64plus_v3_behav.wcfg
+add_wave {{/tb_tt_um_xoroshiro64plus_v2/dut/clk_sel}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20 us
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] FAIL: seeded first word = 0xacf13568, expected 0x00000003
+--- Randomized regression on external clk path ---
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[16420000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[16520000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
+[17440000] FAIL: osc_20m mux path first word = 0xacf13568, expected 0x00000003
+[18737000] FAIL: osc_10m mux path first word = 0xacf13568, expected 0x00000003
+================================================================
+ Golden-model live compare (clk_sel=00 only): 1619 cycles checked, 0 mismatches
+ Directed/RO tests: 5 PASSED, 3 FAILED
+ RESULT: TESTS FAILED
+================================================================
+$finish called at time : 18737400 ps : File "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" Line 440
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_osc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ring_osc(STAGES=53)
+Compiling module xil_defaultlib.ring_osc(STAGES=97)
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_v2_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2668.312 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2668.312 ; gain = 0.000
+Time resolution is 1 ps
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 2668.312 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20 us
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] FAIL: seeded first word = 0xacf13568, expected 0x00000003
+--- Randomized regression on external clk path ---
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[16420000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[16520000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
+[17440000] FAIL: osc_20m mux path first word = 0xacf13568, expected 0x00000003
+[18737000] FAIL: osc_10m mux path first word = 0xacf13568, expected 0x00000003
+================================================================
+ Golden-model live compare (clk_sel=00 only): 1619 cycles checked, 0 mismatches
+ Directed/RO tests: 5 PASSED, 3 FAILED
+ RESULT: TESTS FAILED
+================================================================
+$finish called at time : 18737400 ps : File "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" Line 440
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ring_osc
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_behav xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" Line 3. Module tt_um_xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=53) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/ring_osc.v" Line 31. Module ring_osc(STAGES=97) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ring_osc(STAGES=53)
+Compiling module xil_defaultlib.ring_osc(STAGES=97)
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_v2_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2668.312 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2668.312 ; gain = 0.000
+Time resolution is 1 ps
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 2670.066 ; gain = 1.754
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20 us
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] PASS: seeded first word = 0xacf13568
+--- Verifying ro_noise has a real effect on state evolution ---
+[3180000] PASS: first word identical regardless of ro_noise (pre-update sum, as expected)
+[3180000] PASS: second word differs between ro_noise=0 (0xe72f7f94) and ro_noise=1 (0x662efe95) -- ro_noise is live
+--- Randomized regression on external clk path ---
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[18160000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[18260000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
+current_wave_config {tb_xoroshiro64plus_v3_behav.wcfg}
+tb_xoroshiro64plus_v3_behav.wcfg
+add_wave {{/tb_tt_um_xoroshiro64plus_v2/dut/uio_in}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 20 us
+================================================================
+ Starting tb_tt_um_xoroshiro64plus_v2
+================================================================
+[70000] PASS: uo_out/uio_out/uio_oe all 0x00 after reset
+[390000] PASS: default-seed first word = 0xa9acaefc
+[890000] PASS: core stays idle while ena=0
+[1440000] PASS: seeded first word = 0xacf13568
+--- Verifying ro_noise has a real effect on state evolution ---
+[3180000] PASS: first word identical regardless of ro_noise (pre-update sum, as expected)
+[3180000] PASS: second word differs between ro_noise=0 (0xe72f7f94) and ro_noise=1 (0x662efe95) -- ro_noise is live
+--- Randomized regression on external clk path ---
+--- RO clk_sel paths: confirming documented X-freeze behavior ---
+[18160000] PASS (expected): core_clk/osc_20m settled to X with clk_sel=01 (untimed RO, no SDF)
+[18260000] PASS (expected): core_clk/osc_10m settled to X with clk_sel=10
+--- RO clk_sel paths: forced synthetic clock, validating mux + core logic ---
+save_wave_config {D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/tb_xoroshiro64plus_v3_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 21 23:16:01 2026...
