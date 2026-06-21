@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"tb_tt_um_xoroshiro64plus_v2_func_impl.v" \
+"../../../../../../../src/tb_tt_um_xoroshiro64plus_v2.v" \
+
+# Do not sort compile order
+nosort

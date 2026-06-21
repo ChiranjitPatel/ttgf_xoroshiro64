@@ -1,0 +1,879 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Sun Jun 21 16:37:33 2026
+| Host         : GHOST running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file tt_um_xoroshiro64plus_v2_timing_summary_routed.rpt -pb tt_um_xoroshiro64plus_v2_timing_summary_routed.pb -rpx tt_um_xoroshiro64plus_v2_timing_summary_routed.rpx -warn_on_violation
+| Design       : tt_um_xoroshiro64plus_v2
+| Device       : 7k70t-fbv676
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  103         
+TIMING-23  Warning           Combinational loop found     2           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (515)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (308)
+5. checking no_input_delay (16)
+6. checking no_output_delay (2)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (2)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (515)
+--------------------------
+ There are 103 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 103 register/latch pins with no clock driven by root clock pin: uio_in[6] (HIGH)
+
+ There are 103 register/latch pins with no clock driven by root clock pin: uio_in[7] (HIGH)
+
+ There are 103 register/latch pins with no clock driven by root clock pin: ro30/chain_inferred_i_1/O (HIGH)
+
+ There are 103 register/latch pins with no clock driven by root clock pin: ro50/chain_inferred_i_1/O (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (308)
+--------------------------------------------------
+ There are 308 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (16)
+-------------------------------
+ There are 16 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (2)
+-------------------------------
+ There are 2 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (2)
+---------------------
+ There are 2 combinational loops in the design. (HIGH)
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  310          inf        0.000                      0                  310           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           310 Endpoints
+Min Delay           310 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[30]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.819ns  (logic 1.287ns (16.460%)  route 6.532ns (83.540%))
+  Logic Levels:           17  (FDPE=1 LUT3=1 LUT5=14 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.427     5.896    u_core/rca_carry_23__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I4_O)        0.053     5.949 r  u_core/shift_reg[25]_i_2/O
+                         net (fo=3, routed)           0.423     6.373    u_core/rca_carry_25__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I4_O)        0.053     6.426 r  u_core/shift_reg[27]_i_2/O
+                         net (fo=3, routed)           0.341     6.767    u_core/rca_carry_27__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I4_O)        0.053     6.820 r  u_core/shift_reg[29]_i_2/O
+                         net (fo=3, routed)           0.568     7.388    u_core/rca_carry_29__4
+    SLICE_X5Y7           LUT3 (Prop_lut3_I2_O)        0.068     7.456 r  u_core/shift_reg[30]_i_2/O
+                         net (fo=1, routed)           0.194     7.650    u_core/rca_carry_3031_out
+    SLICE_X5Y7           LUT5 (Prop_lut5_I2_O)        0.169     7.819 r  u_core/shift_reg[30]_i_1/O
+                         net (fo=1, routed)           0.000     7.819    u_core/shift_reg[30]
+    SLICE_X5Y7           FDCE                                         r  u_core/shift_reg_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[31]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.811ns  (logic 1.156ns (14.800%)  route 6.655ns (85.200%))
+  Logic Levels:           17  (FDPE=1 LUT5=15 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.427     5.896    u_core/rca_carry_23__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I4_O)        0.053     5.949 r  u_core/shift_reg[25]_i_2/O
+                         net (fo=3, routed)           0.423     6.373    u_core/rca_carry_25__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I4_O)        0.053     6.426 r  u_core/shift_reg[27]_i_2/O
+                         net (fo=3, routed)           0.341     6.767    u_core/rca_carry_27__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I4_O)        0.053     6.820 r  u_core/shift_reg[29]_i_2/O
+                         net (fo=3, routed)           0.467     7.287    u_core/rca_carry_29__4
+    SLICE_X3Y7           LUT5 (Prop_lut5_I4_O)        0.053     7.340 r  u_core/shift_reg[31]_i_2/O
+                         net (fo=1, routed)           0.418     7.758    u_core/rca_carry_3133_out
+    SLICE_X3Y7           LUT5 (Prop_lut5_I2_O)        0.053     7.811 r  u_core/shift_reg[31]_i_1/O
+                         net (fo=1, routed)           0.000     7.811    u_core/shift_reg[31]
+    SLICE_X3Y7           FDCE                                         r  u_core/shift_reg_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[28]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.673ns  (logic 1.234ns (16.083%)  route 6.439ns (83.917%))
+  Logic Levels:           16  (FDPE=1 LUT3=1 LUT5=13 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.427     5.896    u_core/rca_carry_23__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I4_O)        0.053     5.949 r  u_core/shift_reg[25]_i_2/O
+                         net (fo=3, routed)           0.423     6.373    u_core/rca_carry_25__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I4_O)        0.053     6.426 r  u_core/shift_reg[27]_i_2/O
+                         net (fo=3, routed)           0.611     7.036    u_core/rca_carry_27__4
+    SLICE_X7Y7           LUT3 (Prop_lut3_I2_O)        0.068     7.104 r  u_core/shift_reg[28]_i_2/O
+                         net (fo=1, routed)           0.399     7.504    u_core/rca_carry_28__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I2_O)        0.169     7.673 r  u_core/shift_reg[28]_i_1/O
+                         net (fo=1, routed)           0.000     7.673    u_core/shift_reg[28]
+    SLICE_X5Y7           FDCE                                         r  u_core/shift_reg_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[29]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.441ns  (logic 1.103ns (14.823%)  route 6.338ns (85.177%))
+  Logic Levels:           16  (FDPE=1 LUT5=14 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.427     5.896    u_core/rca_carry_23__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I4_O)        0.053     5.949 r  u_core/shift_reg[25]_i_2/O
+                         net (fo=3, routed)           0.423     6.373    u_core/rca_carry_25__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I4_O)        0.053     6.426 r  u_core/shift_reg[27]_i_2/O
+                         net (fo=3, routed)           0.341     6.767    u_core/rca_carry_27__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I4_O)        0.053     6.820 r  u_core/shift_reg[29]_i_2/O
+                         net (fo=3, routed)           0.568     7.388    u_core/rca_carry_29__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I2_O)        0.053     7.441 r  u_core/shift_reg[29]_i_1/O
+                         net (fo=1, routed)           0.000     7.441    u_core/shift_reg[29]
+    SLICE_X5Y7           FDCE                                         r  u_core/shift_reg_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[27]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.329ns  (logic 1.050ns (14.326%)  route 6.279ns (85.674%))
+  Logic Levels:           15  (FDPE=1 LUT5=13 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.427     5.896    u_core/rca_carry_23__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I4_O)        0.053     5.949 r  u_core/shift_reg[25]_i_2/O
+                         net (fo=3, routed)           0.423     6.373    u_core/rca_carry_25__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I4_O)        0.053     6.426 r  u_core/shift_reg[27]_i_2/O
+                         net (fo=3, routed)           0.611     7.036    u_core/rca_carry_27__4
+    SLICE_X7Y7           LUT5 (Prop_lut5_I2_O)        0.053     7.089 r  u_core/shift_reg[27]_i_1/O
+                         net (fo=1, routed)           0.240     7.329    u_core/shift_reg[27]
+    SLICE_X5Y7           FDCE                                         r  u_core/shift_reg_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[26]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.886ns  (logic 1.177ns (17.094%)  route 5.709ns (82.906%))
+  Logic Levels:           15  (FDPE=1 LUT3=1 LUT5=12 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.427     5.896    u_core/rca_carry_23__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I4_O)        0.053     5.949 r  u_core/shift_reg[25]_i_2/O
+                         net (fo=3, routed)           0.568     6.517    u_core/rca_carry_25__4
+    SLICE_X6Y7           LUT3 (Prop_lut3_I2_O)        0.065     6.582 r  u_core/shift_reg[26]_i_2/O
+                         net (fo=1, routed)           0.135     6.718    u_core/rca_carry_26__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I2_O)        0.168     6.886 r  u_core/shift_reg[26]_i_1/O
+                         net (fo=1, routed)           0.000     6.886    u_core/shift_reg[26]
+    SLICE_X6Y7           FDCE                                         r  u_core/shift_reg_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[25]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.570ns  (logic 0.997ns (15.174%)  route 5.573ns (84.826%))
+  Logic Levels:           14  (FDPE=1 LUT5=12 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.427     5.896    u_core/rca_carry_23__4
+    SLICE_X5Y7           LUT5 (Prop_lut5_I4_O)        0.053     5.949 r  u_core/shift_reg[25]_i_2/O
+                         net (fo=3, routed)           0.568     6.517    u_core/rca_carry_25__4
+    SLICE_X6Y7           LUT5 (Prop_lut5_I2_O)        0.053     6.570 r  u_core/shift_reg[25]_i_1/O
+                         net (fo=1, routed)           0.000     6.570    u_core/shift_reg[25]
+    SLICE_X6Y7           FDCE                                         r  u_core/shift_reg_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[24]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.512ns  (logic 1.124ns (17.261%)  route 5.388ns (82.739%))
+  Logic Levels:           14  (FDPE=1 LUT3=1 LUT5=11 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.681     6.150    u_core/rca_carry_23__4
+    SLICE_X5Y8           LUT3 (Prop_lut3_I2_O)        0.063     6.213 r  u_core/shift_reg[24]_i_2/O
+                         net (fo=1, routed)           0.129     6.342    u_core/rca_carry_24__4
+    SLICE_X5Y8           LUT5 (Prop_lut5_I2_O)        0.170     6.512 r  u_core/shift_reg[24]_i_1/O
+                         net (fo=1, routed)           0.000     6.512    u_core/shift_reg[24]
+    SLICE_X5Y8           FDCE                                         r  u_core/shift_reg_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[23]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.203ns  (logic 0.944ns (15.219%)  route 5.259ns (84.781%))
+  Logic Levels:           13  (FDPE=1 LUT5=11 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.306     5.416    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.469 r  u_core/shift_reg[23]_i_2/O
+                         net (fo=3, routed)           0.681     6.150    u_core/rca_carry_23__4
+    SLICE_X5Y8           LUT5 (Prop_lut5_I2_O)        0.053     6.203 r  u_core/shift_reg[23]_i_1/O
+                         net (fo=1, routed)           0.000     6.203    u_core/shift_reg[23]
+    SLICE_X5Y8           FDCE                                         r  u_core/shift_reg_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[2]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[22]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.780ns  (logic 1.064ns (18.409%)  route 4.716ns (81.591%))
+  Logic Levels:           13  (FDPE=1 LUT3=1 LUT5=10 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y3           FDPE                         0.000     0.000 r  u_core/s1_reg[2]/C
+    SLICE_X2Y3           FDPE (Prop_fdpe_C_Q)         0.308     0.308 r  u_core/s1_reg[2]/Q
+                         net (fo=5, routed)           0.855     1.163    u_core/p_0_in6_in
+    SLICE_X3Y6           LUT6 (Prop_lut6_I0_O)        0.053     1.216 r  u_core/shift_reg[3]_i_2/O
+                         net (fo=3, routed)           0.415     1.631    u_core/rca_carry_3__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     1.684 r  u_core/shift_reg[5]_i_2/O
+                         net (fo=3, routed)           0.317     2.001    u_core/rca_carry_5__4
+    SLICE_X1Y6           LUT5 (Prop_lut5_I4_O)        0.053     2.054 r  u_core/shift_reg[7]_i_2/O
+                         net (fo=3, routed)           0.552     2.606    u_core/rca_carry_7__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.659 r  u_core/shift_reg[9]_i_2/O
+                         net (fo=3, routed)           0.222     2.881    u_core/rca_carry_9__4
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.053     2.934 r  u_core/shift_reg[11]_i_2/O
+                         net (fo=3, routed)           0.447     3.381    u_core/rca_carry_11__4
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.053     3.434 r  u_core/shift_reg[13]_i_2/O
+                         net (fo=3, routed)           0.559     3.993    u_core/rca_carry_13__4
+    SLICE_X5Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.046 r  u_core/shift_reg[15]_i_2/O
+                         net (fo=3, routed)           0.245     4.290    u_core/rca_carry_15__4
+    SLICE_X6Y4           LUT5 (Prop_lut5_I4_O)        0.053     4.343 r  u_core/shift_reg[17]_i_2/O
+                         net (fo=3, routed)           0.247     4.590    u_core/rca_carry_17__4
+    SLICE_X7Y5           LUT5 (Prop_lut5_I4_O)        0.053     4.643 r  u_core/shift_reg[19]_i_2/O
+                         net (fo=3, routed)           0.414     5.057    u_core/rca_carry_19__4
+    SLICE_X5Y5           LUT5 (Prop_lut5_I4_O)        0.053     5.110 r  u_core/shift_reg[21]_i_2/O
+                         net (fo=3, routed)           0.315     5.425    u_core/rca_carry_2121_out
+    SLICE_X5Y5           LUT3 (Prop_lut3_I2_O)        0.056     5.481 r  u_core/shift_reg[22]_i_2/O
+                         net (fo=1, routed)           0.129     5.610    u_core/rca_carry_2266_in
+    SLICE_X5Y5           LUT5 (Prop_lut5_I2_O)        0.170     5.780 r  u_core/shift_reg[22]_i_1/O
+                         net (fo=1, routed)           0.000     5.780    u_core/shift_reg[22]
+    SLICE_X5Y5           FDCE                                         r  u_core/shift_reg_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_core/shift_reg_reg[11]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_core/shift_reg_reg[12]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.210ns  (logic 0.157ns (74.772%)  route 0.053ns (25.228%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y4           FDCE                         0.000     0.000 r  u_core/shift_reg_reg[11]/C
+    SLICE_X3Y4           FDCE (Prop_fdce_C_Q)         0.091     0.091 r  u_core/shift_reg_reg[11]/Q
+                         net (fo=1, routed)           0.053     0.144    u_core/data1[12]
+    SLICE_X3Y4           LUT5 (Prop_lut5_I4_O)        0.066     0.210 r  u_core/shift_reg[12]_i_1/O
+                         net (fo=1, routed)           0.000     0.210    u_core/shift_reg[12]
+    SLICE_X3Y4           FDCE                                         r  u_core/shift_reg_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/shift_reg_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_core/shift_reg_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.210ns  (logic 0.157ns (74.772%)  route 0.053ns (25.228%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y6           FDCE                         0.000     0.000 r  u_core/shift_reg_reg[0]/C
+    SLICE_X3Y6           FDCE (Prop_fdce_C_Q)         0.091     0.091 r  u_core/shift_reg_reg[0]/Q
+                         net (fo=1, routed)           0.053     0.144    u_core/data1[1]
+    SLICE_X3Y6           LUT6 (Prop_lut6_I5_O)        0.066     0.210 r  u_core/shift_reg[1]_i_1/O
+                         net (fo=1, routed)           0.000     0.210    u_core/shift_reg[1]
+    SLICE_X3Y6           FDCE                                         r  u_core/shift_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/shift_reg_reg[27]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_core/shift_reg_reg[28]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.210ns  (logic 0.157ns (74.772%)  route 0.053ns (25.228%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y7           FDCE                         0.000     0.000 r  u_core/shift_reg_reg[27]/C
+    SLICE_X5Y7           FDCE (Prop_fdce_C_Q)         0.091     0.091 r  u_core/shift_reg_reg[27]/Q
+                         net (fo=1, routed)           0.053     0.144    u_core/data1[28]
+    SLICE_X5Y7           LUT5 (Prop_lut5_I4_O)        0.066     0.210 r  u_core/shift_reg[28]_i_1/O
+                         net (fo=1, routed)           0.000     0.210    u_core/shift_reg[28]
+    SLICE_X5Y7           FDCE                                         r  u_core/shift_reg_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/shift_reg_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_core/shift_reg_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.226ns  (logic 0.171ns (75.627%)  route 0.055ns (24.373%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y4           FDCE                         0.000     0.000 r  u_core/shift_reg_reg[7]/C
+    SLICE_X2Y4           FDCE (Prop_fdce_C_Q)         0.107     0.107 r  u_core/shift_reg_reg[7]/Q
+                         net (fo=1, routed)           0.055     0.162    u_core/data1[8]
+    SLICE_X2Y4           LUT5 (Prop_lut5_I4_O)        0.064     0.226 r  u_core/shift_reg[8]_i_1/O
+                         net (fo=1, routed)           0.000     0.226    u_core/shift_reg[8]
+    SLICE_X2Y4           FDCE                                         r  u_core/shift_reg_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s0_reg[11]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/s1_reg[5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.233ns  (logic 0.128ns (54.922%)  route 0.105ns (45.078%))
+  Logic Levels:           2  (FDPE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y3           FDPE                         0.000     0.000 r  u_core/s0_reg[11]/C
+    SLICE_X3Y3           FDPE (Prop_fdpe_C_Q)         0.100     0.100 r  u_core/s0_reg[11]/Q
+                         net (fo=5, routed)           0.105     0.205    u_core/p_1_in34_in
+    SLICE_X2Y3           LUT4 (Prop_lut4_I2_O)        0.028     0.233 r  u_core/s1[5]_i_1/O
+                         net (fo=1, routed)           0.000     0.233    u_core/s1[5]_i_1_n_0
+    SLICE_X2Y3           FDCE                                         r  u_core/s1_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s1_reg[16]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_core/s1_reg[16]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.245ns  (logic 0.128ns (52.154%)  route 0.117ns (47.846%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y3           FDCE                         0.000     0.000 r  u_core/s1_reg[16]/C
+    SLICE_X5Y3           FDCE (Prop_fdce_C_Q)         0.100     0.100 r  u_core/s1_reg[16]/Q
+                         net (fo=5, routed)           0.117     0.217    u_core/p_0_in48_in
+    SLICE_X5Y3           LUT5 (Prop_lut5_I1_O)        0.028     0.245 r  u_core/s1[16]_i_1/O
+                         net (fo=1, routed)           0.000     0.245    u_core/s1[16]_i_1_n_0
+    SLICE_X5Y3           FDCE                                         r  u_core/s1_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s0_reg[5]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/s1_reg[31]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.248ns  (logic 0.128ns (51.710%)  route 0.120ns (48.290%))
+  Logic Levels:           2  (FDPE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y7           FDPE                         0.000     0.000 r  u_core/s0_reg[5]/C
+    SLICE_X1Y7           FDPE (Prop_fdpe_C_Q)         0.100     0.100 r  u_core/s0_reg[5]/Q
+                         net (fo=5, routed)           0.120     0.220    u_core/p_1_in16_in
+    SLICE_X2Y7           LUT5 (Prop_lut5_I3_O)        0.028     0.248 r  u_core/s1[31]_i_2/O
+                         net (fo=1, routed)           0.000     0.248    u_core/s1[31]_i_2_n_0
+    SLICE_X2Y7           FDPE                                         r  u_core/s1_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/bit_cnt_reg[4]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_core/bit_cnt_reg[5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.252ns  (logic 0.155ns (61.604%)  route 0.097ns (38.396%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y10          FDCE                         0.000     0.000 r  u_core/bit_cnt_reg[4]/C
+    SLICE_X1Y10          FDCE (Prop_fdce_C_Q)         0.091     0.091 f  u_core/bit_cnt_reg[4]/Q
+                         net (fo=3, routed)           0.097     0.188    u_core/bit_cnt[4]
+    SLICE_X1Y10          LUT6 (Prop_lut6_I5_O)        0.064     0.252 r  u_core/bit_cnt[5]_i_2/O
+                         net (fo=1, routed)           0.000     0.252    u_core/bit_cnt[5]_i_2_n_0
+    SLICE_X1Y10          FDCE                                         r  u_core/bit_cnt_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s0_reg[6]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/s1_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.254ns  (logic 0.128ns (50.405%)  route 0.126ns (49.595%))
+  Logic Levels:           2  (FDPE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y7           FDPE                         0.000     0.000 r  u_core/s0_reg[6]/C
+    SLICE_X1Y7           FDPE (Prop_fdpe_C_Q)         0.100     0.100 r  u_core/s0_reg[6]/Q
+                         net (fo=4, routed)           0.126     0.226    u_core/p_1_in19_in
+    SLICE_X2Y6           LUT4 (Prop_lut4_I2_O)        0.028     0.254 r  u_core/s1[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.254    u_core/s1[0]_i_1_n_0
+    SLICE_X2Y6           FDPE                                         r  u_core/s1_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_core/s0_reg[16]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            u_core/shift_reg_reg[16]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.255ns  (logic 0.146ns (57.261%)  route 0.109ns (42.739%))
+  Logic Levels:           2  (FDPE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y4           FDPE                         0.000     0.000 r  u_core/s0_reg[16]/C
+    SLICE_X6Y4           FDPE (Prop_fdpe_C_Q)         0.118     0.118 r  u_core/s0_reg[16]/Q
+                         net (fo=4, routed)           0.109     0.227    u_core/p_1_in49_in
+    SLICE_X7Y4           LUT5 (Prop_lut5_I1_O)        0.028     0.255 r  u_core/shift_reg[16]_i_1/O
+                         net (fo=1, routed)           0.000     0.255    u_core/shift_reg[16]
+    SLICE_X7Y4           FDCE                                         r  u_core/shift_reg_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

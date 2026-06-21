@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_xoroshiro64plus_v3_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_xoroshiro64plus_v3" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,000.000 ns"></ZoomEndTime>
+      <Cursor1Time time="4,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="142"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="55" />
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/ro_noise" type="logic">
+      <obj_property name="ElementShortName">ro_noise</obj_property>
+      <obj_property name="ObjectShortName">ro_noise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/seed_data" type="array">
+      <obj_property name="ElementShortName">seed_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seed_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/seed_wen" type="logic">
+      <obj_property name="ElementShortName">seed_wen</obj_property>
+      <obj_property name="ObjectShortName">seed_wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/seed_sel" type="array">
+      <obj_property name="ElementShortName">seed_sel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seed_sel[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/serial_out" type="logic">
+      <obj_property name="ElementShortName">serial_out</obj_property>
+      <obj_property name="ObjectShortName">serial_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/valid_out" type="logic">
+      <obj_property name="ElementShortName">valid_out</obj_property>
+      <obj_property name="ObjectShortName">valid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_s0" type="array">
+      <obj_property name="ElementShortName">g_s0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g_s0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_s1" type="array">
+      <obj_property name="ElementShortName">g_s1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g_s1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_shift" type="array">
+      <obj_property name="ElementShortName">g_shift[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g_shift[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_bit_cnt" type="array">
+      <obj_property name="ElementShortName">g_bit_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">g_bit_cnt[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_valid" type="logic">
+      <obj_property name="ElementShortName">g_valid</obj_property>
+      <obj_property name="ObjectShortName">g_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_seed_s1_sel" type="logic">
+      <obj_property name="ElementShortName">g_seed_s1_sel</obj_property>
+      <obj_property name="ObjectShortName">g_seed_s1_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_seed_byte" type="array">
+      <obj_property name="ElementShortName">g_seed_byte[1:0]</obj_property>
+      <obj_property name="ObjectShortName">g_seed_byte[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_rca_sum" type="array">
+      <obj_property name="ElementShortName">g_rca_sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g_rca_sum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_s0_next" type="array">
+      <obj_property name="ElementShortName">g_s0_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g_s0_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_s0_rotl26" type="array">
+      <obj_property name="ElementShortName">g_s0_rotl26[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g_s0_rotl26[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_s1_next" type="array">
+      <obj_property name="ElementShortName">g_s1_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g_s1_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/g_serial_out" type="logic">
+      <obj_property name="ElementShortName">g_serial_out</obj_property>
+      <obj_property name="ObjectShortName">g_serial_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/check_count" type="array">
+      <obj_property name="ElementShortName">check_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">check_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/error_count" type="array">
+      <obj_property name="ElementShortName">error_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">error_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/checking_enabled" type="logic">
+      <obj_property name="ElementShortName">checking_enabled</obj_property>
+      <obj_property name="ObjectShortName">checking_enabled</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/word0" type="array">
+      <obj_property name="ElementShortName">word0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">word0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/word1" type="array">
+      <obj_property name="ElementShortName">word1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">word1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/word2" type="array">
+      <obj_property name="ElementShortName">word2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">word2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/expected0" type="array">
+      <obj_property name="ElementShortName">expected0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/expected1" type="array">
+      <obj_property name="ElementShortName">expected1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/pass_count" type="array">
+      <obj_property name="ElementShortName">pass_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pass_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/fail_count" type="array">
+      <obj_property name="ElementShortName">fail_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fail_count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/k" type="array">
+      <obj_property name="ElementShortName">k[31:0]</obj_property>
+      <obj_property name="ObjectShortName">k[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/rand_seed" type="array">
+      <obj_property name="ElementShortName">rand_seed[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rand_seed[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/ro_noise" type="logic">
+      <obj_property name="ElementShortName">ro_noise</obj_property>
+      <obj_property name="ObjectShortName">ro_noise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/seed_data" type="array">
+      <obj_property name="ElementShortName">seed_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seed_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/seed_wen" type="logic">
+      <obj_property name="ElementShortName">seed_wen</obj_property>
+      <obj_property name="ObjectShortName">seed_wen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/seed_sel" type="array">
+      <obj_property name="ElementShortName">seed_sel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">seed_sel[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/serial_out" type="logic">
+      <obj_property name="ElementShortName">serial_out</obj_property>
+      <obj_property name="ObjectShortName">serial_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/valid_out" type="logic">
+      <obj_property name="ElementShortName">valid_out</obj_property>
+      <obj_property name="ObjectShortName">valid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/s0" type="array">
+      <obj_property name="ElementShortName">s0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/s1" type="array">
+      <obj_property name="ElementShortName">s1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/output_reg" type="array">
+      <obj_property name="ElementShortName">output_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/shift_reg" type="array">
+      <obj_property name="ElementShortName">shift_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">shift_reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/bit_cnt" type="array">
+      <obj_property name="ElementShortName">bit_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_cnt[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/seed_s1_sel" type="logic">
+      <obj_property name="ElementShortName">seed_s1_sel</obj_property>
+      <obj_property name="ObjectShortName">seed_s1_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/seed_byte" type="array">
+      <obj_property name="ElementShortName">seed_byte[1:0]</obj_property>
+      <obj_property name="ObjectShortName">seed_byte[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/rca_sum" type="array">
+      <obj_property name="ElementShortName">rca_sum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rca_sum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/carry" type="array">
+      <obj_property name="ElementShortName">carry[32:0]</obj_property>
+      <obj_property name="ObjectShortName">carry[32:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/s0_next" type="array">
+      <obj_property name="ElementShortName">s0_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s0_next[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/s0_rotl26" type="array">
+      <obj_property name="ElementShortName">s0_rotl26[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s0_rotl26[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_xoroshiro64plus_v3/dut/s1_next" type="array">
+      <obj_property name="ElementShortName">s1_next[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s1_next[31:0]</obj_property>
+   </wvobject>
+</wave_config>

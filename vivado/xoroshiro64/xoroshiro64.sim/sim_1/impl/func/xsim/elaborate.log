@@ -1,0 +1,12 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_v2_func_impl xil_defaultlib.tb_tt_um_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:361]
+ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:367]
+ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:391]
+ERROR: [VRFC 10-2991] 'osc_50m' is not declared under prefix 'dut' [D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus_v2.v:405]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

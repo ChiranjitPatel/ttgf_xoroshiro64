@@ -1,0 +1,1124 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Jun 20 13:45:00 2026
+# Process ID: 21052
+# Current directory: D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22372 D:\Github\ttgf_xoroshiro64\vivado\xoroshiro64\xoroshiro64.xpr
+# Log file: D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/vivado.log
+# Journal file: D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64\vivado.jou
+# Running On        :GHOST
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz
+# CPU Frequency     :2496 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :17041 MB
+# Swap memory       :7247 MB
+# Total Virtual     :24289 MB
+# Available Virtual :15119 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/data/ip'.
+open_project: Time (s): cpu = 00:00:43 ; elapsed = 00:00:41 . Memory (MB): peak = 1480.996 ; gain = 425.094
+update_compile_order -fileset sources_1
+add_files -norecurse {D:/Github/ttgf_xoroshiro64/src/xoroshiro64p_v2.v D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v2.v
+update_compile_order -fileset sim_1
+set_property top tb_xoroshiro64plus_v2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+ERROR: [VRFC 10-1280] procedural assignment to a non-register core_clk is not permitted, left-hand side should be reg/integer/time/genvar [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:33]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register core_clk is not permitted, left-hand side should be reg/integer/time/genvar [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:34]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register core_clk is not permitted, left-hand side should be reg/integer/time/genvar [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:35]
+ERROR: [VRFC 10-8530] module 'tt_um_xoroshiro64plus_v2' is ignored due to previous errors [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:3]
+INFO: [VRFC 10-311] analyzing module ring_osc_fpga
+ERROR: [VRFC 10-8530] module 'ring_osc_fpga' is ignored due to previous errors [D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v:61]
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1541.246 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '11' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1541.246 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-311] analyzing module ring_osc_fpga
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v2_behav xil_defaultlib.tb_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v2_behav xil_defaultlib.tb_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2989] 'tb_xoroshiro' is not declared [D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v2.v:62]
+WARNING: [VRFC 10-3705] select index 32 into 'rca_carry' is out of bounds [D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v:80]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1541.246 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-311] analyzing module ring_osc_fpga
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v2_behav xil_defaultlib.tb_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v2_behav xil_defaultlib.tb_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index 32 into 'rca_carry' is out of bounds [D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v:80]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ring_osc_fpga_default
+Compiling module xil_defaultlib.ring_osc_fpga(STAGES=35)
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.tb_xoroshiro64plus_v2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_xoroshiro64plus_v2_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1545.797 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_xoroshiro64plus_v2_behav -key {Behavioral:sim_1:Functional:tb_xoroshiro64plus_v2} -tclbatch {tb_xoroshiro64plus_v2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_xoroshiro64plus_v2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+xsim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1596.863 ; gain = 51.066
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_xoroshiro64plus_v2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 1596.863 ; gain = 51.066
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-311] analyzing module ring_osc_fpga
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v2_behav xil_defaultlib.tb_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v2_behav xil_defaultlib.tb_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ring_osc_fpga_default
+Compiling module xil_defaultlib.ring_osc_fpga(STAGES=35)
+Compiling module xil_defaultlib.xoroshiro64plus_v2
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.tb_xoroshiro64plus_v2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_xoroshiro64plus_v2_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1596.863 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_xoroshiro64plus_v2_behav -key {Behavioral:sim_1:Functional:tb_xoroshiro64plus_v2} -tclbatch {tb_xoroshiro64plus_v2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_xoroshiro64plus_v2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_xoroshiro64plus_v2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1596.863 ; gain = 0.000
+run 5 us
+=== Loading 64-bit seed = deadbeefcafef00d ===
+Seed loading completed.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_xoroshiro64plus_v2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_xoroshiro64plus_v2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_xoroshiro64plus_v2_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus_v2
+INFO: [VRFC 10-311] analyzing module ring_osc_fpga
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_xoroshiro64plus_v2
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v2_behav xil_defaultlib.tb_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v2_behav xil_defaultlib.tb_xoroshiro64plus_v2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index 32 into 'rca_carry' is out of bounds [D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v:80]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ring_osc_fpga_default
+Compiling module xil_defaultlib.ring_osc_fpga(STAGES=35)
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus_v2
+Compiling module xil_defaultlib.tb_xoroshiro64plus_v2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_xoroshiro64plus_v2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_xoroshiro64plus_v2_behav -key {Behavioral:sim_1:Functional:tb_xoroshiro64plus_v2} -tclbatch {tb_xoroshiro64plus_v2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_xoroshiro64plus_v2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_xoroshiro64plus_v2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1596.863 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+add_files -norecurse D:/Github/ttgf_xoroshiro64/src/tt_um_prng64plus.v
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus.v
+update_compile_order -fileset sim_1
+set_property top tb_tt_um_xoroshiro64plus [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property top tt_um_xoroshiro64plus [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_tt_um_xoroshiro64plus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_prng64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index 32 into 'rca_carry' is out of bounds [D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v:80]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_tt_um_xoroshiro64plus_behav -key {Behavioral:sim_1:Functional:tb_tt_um_xoroshiro64plus} -tclbatch {tb_tt_um_xoroshiro64plus.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_tt_um_xoroshiro64plus.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_tt_um_xoroshiro64plus_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1596.863 ; gain = 0.000
+run 5 us
+Time=1185000 | VALID | New 32-bit word started (serial MSB first)
+Time=1505000 | VALID | New 32-bit word started (serial MSB first)
+Time=1825000 | VALID | New 32-bit word started (serial MSB first)
+Time=2145000 | VALID | New 32-bit word started (serial MSB first)
+Time=2465000 | VALID | New 32-bit word started (serial MSB first)
+Time=2785000 | VALID | New 32-bit word started (serial MSB first)
+Time=3105000 | VALID | New 32-bit word started (serial MSB first)
+Time=3425000 | VALID | New 32-bit word started (serial MSB first)
+Time=3745000 | VALID | New 32-bit word started (serial MSB first)
+Time=4065000 | VALID | New 32-bit word started (serial MSB first)
+Time=4385000 | VALID | New 32-bit word started (serial MSB first)
+Time=4705000 | VALID | New 32-bit word started (serial MSB first)
+Time=5025000 | VALID | New 32-bit word started (serial MSB first)
+
+=== Loading 64-bit seed = deadbeefcafef00d ===
+Time=5375000 | VALID | New 32-bit word started (serial MSB first)
+Seed loading completed.
+Time=5745000 | VALID | New 32-bit word started (serial MSB first)
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_tt_um_xoroshiro64plus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_prng64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1596.863 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/tb_tt_um_xoroshiro64plus/dut}} 
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/tb_tt_um_xoroshiro64plus/dut/u_core}} 
+run 5 us
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+Time=1185000 | VALID | New 32-bit word started (serial MSB first)
+Time=1505000 | VALID | New 32-bit word started (serial MSB first)
+Time=1825000 | VALID | New 32-bit word started (serial MSB first)
+Time=2145000 | VALID | New 32-bit word started (serial MSB first)
+Time=2465000 | VALID | New 32-bit word started (serial MSB first)
+Time=2785000 | VALID | New 32-bit word started (serial MSB first)
+Time=3105000 | VALID | New 32-bit word started (serial MSB first)
+Time=3425000 | VALID | New 32-bit word started (serial MSB first)
+Time=3745000 | VALID | New 32-bit word started (serial MSB first)
+Time=4065000 | VALID | New 32-bit word started (serial MSB first)
+Time=4385000 | VALID | New 32-bit word started (serial MSB first)
+Time=4705000 | VALID | New 32-bit word started (serial MSB first)
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 1 us
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+save_wave_config {D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/tb_tt_um_xoroshiro64plus_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_tt_um_xoroshiro64plus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_prng64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_tt_um_xoroshiro64plus_behav -key {Behavioral:sim_1:Functional:tb_tt_um_xoroshiro64plus} -tclbatch {tb_tt_um_xoroshiro64plus.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_tt_um_xoroshiro64plus.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_tt_um_xoroshiro64plus_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2638.145 ; gain = 0.000
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/tb_tt_um_xoroshiro64plus/dut/u_core}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 1 us
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_tt_um_xoroshiro64plus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_prng64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_tt_um_xoroshiro64plus_behav -key {Behavioral:sim_1:Functional:tb_tt_um_xoroshiro64plus} -tclbatch {tb_tt_um_xoroshiro64plus.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_tt_um_xoroshiro64plus.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_tt_um_xoroshiro64plus_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2638.145 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 1 us
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/tb_tt_um_xoroshiro64plus/dut/u_core}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 1 us
+
+=== Loading 64-bit seed = 123456789abcdef0 ===
+Seed loading completed.
+Time=225000 | VALID | New 32-bit word started (serial MSB first)
+Time=545000 | VALID | New 32-bit word started (serial MSB first)
+Time=865000 | VALID | New 32-bit word started (serial MSB first)
+run 1 us
+Time=1185000 | VALID | New 32-bit word started (serial MSB first)
+Time=1505000 | VALID | New 32-bit word started (serial MSB first)
+Time=1825000 | VALID | New 32-bit word started (serial MSB first)
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Github\ttgf_xoroshiro64\src\tt_um_prng64plus.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Github\ttgf_xoroshiro64\src\xoroshiro64p.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Github\ttgf_xoroshiro64\src\tt_um_prng64plus.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:\Github\ttgf_xoroshiro64\src\tt_um_prng64plus.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_tt_um_xoroshiro64plus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tt_um_prng64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_tt_um_xoroshiro64plus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_xoroshiro64plus
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_tt_um_xoroshiro64plus'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_tt_um_xoroshiro64plus_behav xil_defaultlib.tb_tt_um_xoroshiro64plus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.tb_tt_um_xoroshiro64plus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_tt_um_xoroshiro64plus_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Time resolution is 1 ps
+
+=== Loading seed = 123456789abcdef0 ===
+Seed loaded and ui_in cleared.
+Time=245000 | VALID_OUT | Output = acf13568   | ui_in=00
+Time=565000 | VALID_OUT | Output = e72f7f94   | ui_in=00
+Time=885000 | VALID_OUT | Output = 0ef54796   | ui_in=00
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 2647.473 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 1 us
+
+=== Loading seed = 123456789abcdef0 ===
+Seed loaded and ui_in cleared.
+Time=245000 | VALID_OUT | Output = acf13568   | ui_in=00
+Time=565000 | VALID_OUT | Output = e72f7f94   | ui_in=00
+Time=885000 | VALID_OUT | Output = 0ef54796   | ui_in=00
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v3.v
+update_compile_order -fileset sim_1
+set_property top tb_xoroshiro64plus_v3 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_xoroshiro64plus_v3'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_xoroshiro64plus_v3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_xoroshiro64plus_v3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_xoroshiro64plus_v3
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v3_behav xil_defaultlib.tb_xoroshiro64plus_v3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v3_behav xil_defaultlib.tb_xoroshiro64plus_v3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2989] 'tb_xoroshiro64plus' is not declared [D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v3.v:75]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 2647.473 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_xoroshiro64plus_v3'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_xoroshiro64plus_v3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_xoroshiro64plus_v3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_xoroshiro64plus_v3
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v3_behav xil_defaultlib.tb_xoroshiro64plus_v3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v3_behav xil_defaultlib.tb_xoroshiro64plus_v3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p.v" Line 186. Module xoroshiro64plus doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.xoroshiro64plus
+Compiling module xil_defaultlib.tb_xoroshiro64plus_v3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_xoroshiro64plus_v3_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2647.473 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_xoroshiro64plus_v3_behav -key {Behavioral:sim_1:Functional:tb_xoroshiro64plus_v3} -tclbatch {tb_xoroshiro64plus_v3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_xoroshiro64plus_v3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+================================================================
+ Starting tb_xoroshiro64plus
+================================================================
+[360000] PASS: default-seed first word = 0xa9acaefc
+[880000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_xoroshiro64plus_v3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2647.473 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 1 us
+================================================================
+ Starting tb_xoroshiro64plus
+================================================================
+[360000] PASS: default-seed first word = 0xa9acaefc
+[880000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+run 1 us
+[1620000] INFO: mid-stream reseed corner case exercised (see live compare)
+[1820000] PASS: valid_out stays low while disabled
+--- Randomized regression (golden-model live compare) ---
+run 1 us
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/tb_xoroshiro64plus_v3/dut}} 
+run 1 us
+================================================================
+ Starting tb_xoroshiro64plus
+================================================================
+[360000] PASS: default-seed first word = 0xa9acaefc
+[880000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+run 1 us
+[1620000] INFO: mid-stream reseed corner case exercised (see live compare)
+[1820000] PASS: valid_out stays low while disabled
+--- Randomized regression (golden-model live compare) ---
+run 1 us
+run 1 us
+run 1 us
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/tb_xoroshiro64plus_v3}} 
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/tb_xoroshiro64plus_v3/dut}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_xoroshiro64plus_v3'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/SOFTWARES/vivado2024/install/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_xoroshiro64plus_v3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_xoroshiro64plus_v3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p_v2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xoroshiro64plus_v2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Github/ttgf_xoroshiro64/src/tb_xoroshiro64plus_v3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_xoroshiro64plus_v3
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v3_behav xil_defaultlib.tb_xoroshiro64plus_v3 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/SOFTWARES/vivado2024/install/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_xoroshiro64plus_v3_behav xil_defaultlib.tb_xoroshiro64plus_v3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p_v2.v" Line 3. Module xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Github/ttgf_xoroshiro64/src/xoroshiro64p_v2.v" Line 3. Module xoroshiro64plus_v2 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.xoroshiro64plus_v2
+Compiling module xil_defaultlib.tb_xoroshiro64plus_v3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_xoroshiro64plus_v3_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2647.473 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/xoroshiro64.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_xoroshiro64plus_v3_behav -key {Behavioral:sim_1:Functional:tb_xoroshiro64plus_v3} -tclbatch {tb_xoroshiro64plus_v3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_xoroshiro64plus_v3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+================================================================
+ Starting tb_xoroshiro64plus
+================================================================
+[360000] PASS: default-seed first word = 0xa9acaefc
+[880000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+[890000] MISMATCH valid_out: DUT=0 golden=1
+[950000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=7)
+[960000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=8)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_xoroshiro64plus_v3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 2647.473 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 1 us
+================================================================
+ Starting tb_xoroshiro64plus
+================================================================
+[360000] PASS: default-seed first word = 0xa9acaefc
+[880000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+[890000] MISMATCH valid_out: DUT=0 golden=1
+[950000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=7)
+[960000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=8)
+run 1 us
+[1040000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=16)
+[1110000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=23)
+[1120000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=24)
+[1200000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=0)
+[1530000] MISMATCH valid_out: DUT=0 golden=1
+[1680000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=15)
+[1690000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=16)
+[1760000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=23)
+[1770000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=24)
+[1850000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=0)
+[1940000] INFO: mid-stream reseed corner case exercised (see live compare)
+run 1 us
+[2140000] PASS: valid_out stays low while disabled
+--- Randomized regression (golden-model live compare) ---
+[2990000] MISMATCH valid_out: DUT=0 golden=1
+run 1 us
+[3350000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=6)
+[3370000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=8)
+[3430000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=14)
+[3450000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=16)
+[3470000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=18)
+[3480000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=19)
+[3510000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=22)
+[3670000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=27)
+[3760000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=29)
+[3810000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=31)
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/tb_xoroshiro64plus_v3/dut}} 
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 1 us
+================================================================
+ Starting tb_xoroshiro64plus
+================================================================
+[360000] PASS: default-seed first word = 0xa9acaefc
+[880000] PASS: seeded(s0=1,s1=2) first word = 0x00000003
+[890000] MISMATCH valid_out: DUT=0 golden=1
+[950000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=7)
+[960000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=8)
+run 1 us
+[1040000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=16)
+[1110000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=23)
+[1120000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=24)
+[1200000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=0)
+[1530000] MISMATCH valid_out: DUT=0 golden=1
+[1680000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=15)
+[1690000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=16)
+[1760000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=23)
+[1770000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=24)
+[1850000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=0)
+[1940000] INFO: mid-stream reseed corner case exercised (see live compare)
+run 1 us
+[2140000] PASS: valid_out stays low while disabled
+--- Randomized regression (golden-model live compare) ---
+[2990000] MISMATCH valid_out: DUT=0 golden=1
+run 1 us
+[3350000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=6)
+[3370000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=8)
+[3430000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=14)
+[3450000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=16)
+[3470000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=18)
+[3480000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=19)
+[3510000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=22)
+[3670000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=27)
+[3760000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=29)
+[3810000] MISMATCH serial_out: DUT=0 golden=1 (golden bit_cnt=31)
+save_wave_config {D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/tb_xoroshiro64plus_v3_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/tb_xoroshiro64plus_v3_behav.wcfg
+set_property xsim.view D:/Github/ttgf_xoroshiro64/vivado/xoroshiro64/tb_xoroshiro64plus_v3_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 21 00:17:11 2026...
