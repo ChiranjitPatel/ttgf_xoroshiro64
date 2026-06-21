@@ -98,16 +98,16 @@ module GF_inverter (
 endmodule
 
 module ring_osc #(
-    parameter DEPTH = 500 // Becomes DEPTH*2+1 inverters to ensure it is odd.
+    parameter STAGES = 21 // Becomes STAGES*2+1 inverters to ensure it is odd.
 ) (
     input wire ena,
     output wire osc_out
 );
-    wire [DEPTH*2:0] inv_in;
-    wire [DEPTH*2:0] inv_out;
-    assign inv_in[DEPTH*2:1] = inv_out[DEPTH*2-1:0]; // Chain.
-    assign inv_in[0] = inv_out[DEPTH*2] & ena;        // Loop back.
-    (* keep_hierarchy *) GF_inverter inv_array [DEPTH*2:0] ( .a(inv_in), .y(inv_out) );
+    wire [STAGES*2:0] inv_in;
+    wire [STAGES*2:0] inv_out;
+    assign inv_in[STAGES*2:1] = inv_out[STAGES*2-1:0]; // Chain.
+    assign inv_in[0] = inv_out[STAGES*2] & ena;        // Loop back.
+    (* keep_hierarchy *) GF_inverter inv_array [STAGES*2:0] ( .a(inv_in), .y(inv_out) );
     assign osc_out = inv_in[0];
 endmodule
 `default_nettype wire

@@ -24,8 +24,8 @@ module tt_um_xoroshiro64plus_v2 (
     // ====================== Ring Oscillators ======================
     wire osc_50m, osc_30m;
 
-    ring_osc_fpga #(.STAGES(21)) ro50 (.ena(1'b1), .osc_out(osc_50m));
-    ring_osc_fpga #(.STAGES(35)) ro30 (.ena(1'b1), .osc_out(osc_30m));
+    ring_osc #(.STAGES(21)) ro50 (.ena(1'b1), .osc_out(osc_50m));
+    ring_osc #(.STAGES(35)) ro30 (.ena(1'b1), .osc_out(osc_30m));
 
     // ====================== Clock Mux (Fixed) ======================
     wire core_clk = (clk_sel == 2'b01) ? osc_50m :
