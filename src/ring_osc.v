@@ -1,51 +1,51 @@
-`default_nettype none
+// `default_nettype none
 
-`ifdef USE_POWER_PINS
-        `define LINT_OFF_PINMISSING_POWER_PINS /* verilator lint_off PINMISSING */
-        `define LINT_ON_PINMISSING_POWER_PINS  /* verilator lint_on PINMISSING */
-`endif
+// `ifdef USE_POWER_PINS
+        // `define LINT_OFF_PINMISSING_POWER_PINS /* verilator lint_off PINMISSING */
+        // `define LINT_ON_PINMISSING_POWER_PINS  /* verilator lint_on PINMISSING */
+// `endif
 	
-module GF_inverter (
-    input   wire a,
-    output  wire y
-);
- `LINT_OFF_PINMISSING_POWER_PINS
-    (* keep_hierarchy *) gf180mcu_fd_sc_mcu7t5v0__inv_1    gf180mcu_inverter (
-        .I  (a),
-        .ZN  (y)
-    );
+// module GF_inverter (
+    // input   wire a,
+    // output  wire y
+// );
+ // `LINT_OFF_PINMISSING_POWER_PINS
+    // (* keep_hierarchy *) gf180mcu_fd_sc_mcu7t5v0__inv_1    gf180mcu_inverter (
+        // .I  (a),
+        // .ZN  (y)
+    // );
 
-`LINT_ON_PINMISSING_POWER_PINS
+// `LINT_ON_PINMISSING_POWER_PINS
 
-endmodule
+// endmodule
 
-module ring_osc #(
-    parameter DEPTH = 500 // Becomes DEPTH*2+1 inverters to ensure it is odd.
-) (
-    input wire ena,
-    output wire osc_out
-);
+// module ring_osc #(
+    // parameter DEPTH = 500 // Becomes DEPTH*2+1 inverters to ensure it is odd.
+// ) (
+    // input wire ena,
+    // output wire osc_out
+// );
 
-    wire [DEPTH*2:0] inv_in;
-    wire [DEPTH*2:0] inv_out;
-    assign inv_in[DEPTH*2:1] = inv_out[DEPTH*2-1:0]; // Chain.
-    assign inv_in[0] = inv_out[DEPTH*2] & ena; // Loop back.
-    // Generate an instance array of inverters, chained and looped back via the 2 assignments above:
-    (* keep_hierarchy *) GF_inverter inv_array [DEPTH*2:0] ( .a(inv_in), .y(inv_out) );
-    assign osc_out = inv_in[0];
+    // wire [DEPTH*2:0] inv_in;
+    // wire [DEPTH*2:0] inv_out;
+    // assign inv_in[DEPTH*2:1] = inv_out[DEPTH*2-1:0]; // Chain.
+    // assign inv_in[0] = inv_out[DEPTH*2] & ena; // Loop back.
+    // // Generate an instance array of inverters, chained and looped back via the 2 assignments above:
+    // (* keep_hierarchy *) GF_inverter inv_array [DEPTH*2:0] ( .a(inv_in), .y(inv_out) );
+    // assign osc_out = inv_in[0];
 
-endmodule
+// endmodule
 
-`ifdef LINT_OFF_PINMISSING_POWER_PINS
-    `undef LINT_OFF_PINMISSING_POWER_PINS
-`endif
+// `ifdef LINT_OFF_PINMISSING_POWER_PINS
+    // `undef LINT_OFF_PINMISSING_POWER_PINS
+// `endif
 
-`ifdef LINT_ON_PINMISSING_POWER_PINS
-    `undef LINT_ON_PINMISSING_POWER_PINS
-`endif
+// `ifdef LINT_ON_PINMISSING_POWER_PINS
+    // `undef LINT_ON_PINMISSING_POWER_PINS
+// `endif
 
 
-`default_nettype none
+// `default_nettype none
 
 ///////////////////////////////////////////////////////////////
 // module GF_inverter (
@@ -82,3 +82,32 @@ endmodule
 
     // assign osc_out = inv_in[0];
 // endmodule
+
+`default_nettype none
+
+module GF_inverter (
+    input   wire a,
+    output  wire y
+);
+    /* verilator lint_off PINMISSING */
+    (* keep_hierarchy *) gf180mcu_fd_sc_mcu7t5v0__inv_1    gf180mcu_inverter (
+        .I  (a),
+        .ZN  (y)
+    );
+    /* verilator lint_on PINMISSING */
+endmodule
+
+module ring_osc #(
+    parameter DEPTH = 500 // Becomes DEPTH*2+1 inverters to ensure it is odd.
+) (
+    input wire ena,
+    output wire osc_out
+);
+    wire [DEPTH*2:0] inv_in;
+    wire [DEPTH*2:0] inv_out;
+    assign inv_in[DEPTH*2:1] = inv_out[DEPTH*2-1:0]; // Chain.
+    assign inv_in[0] = inv_out[DEPTH*2] & ena;        // Loop back.
+    (* keep_hierarchy *) GF_inverter inv_array [DEPTH*2:0] ( .a(inv_in), .y(inv_out) );
+    assign osc_out = inv_in[0];
+endmodule
+`default_nettype wire
