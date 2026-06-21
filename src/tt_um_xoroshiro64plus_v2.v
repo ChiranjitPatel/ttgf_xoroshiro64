@@ -56,26 +56,26 @@ endmodule
 
 
 // ====================== FPGA Ring Oscillator ======================
-module ring_osc_fpga #(
-    parameter STAGES = 21
-) (
-    input wire ena,
-    output wire osc_out
-);
-    (* keep = "true", dont_touch = "true" *)
-    wire [STAGES-1:0] chain;
+// module ring_osc_fpga #(
+    // parameter STAGES = 21
+// ) (
+    // input wire ena,
+    // output wire osc_out
+// );
+    // (* keep = "true", dont_touch = "true" *)
+    // wire [STAGES-1:0] chain;
 
-    genvar i;
-    generate
-        for (i = 0; i < STAGES; i = i + 1) begin : ro_inv
-            if (i == 0)
-                assign chain[0] = ~chain[STAGES-1] & ena;
-            else
-                assign chain[i] = ~chain[i-1];
-        end
-    endgenerate
+    // genvar i;
+    // generate
+        // for (i = 0; i < STAGES; i = i + 1) begin : ro_inv
+            // if (i == 0)
+                // assign chain[0] = ~chain[STAGES-1] & ena;
+            // else
+                // assign chain[i] = ~chain[i-1];
+        // end
+    // endgenerate
 
-    assign osc_out = chain[0];
-endmodule
+    // assign osc_out = chain[0];
+// endmodule
 
 `default_nettype wire
