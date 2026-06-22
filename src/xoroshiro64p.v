@@ -46,7 +46,7 @@ module xoroshiro64plus (
 
     // ====================== Ripple Carry Adder ======================
     wire [31:0] rca_sum;
-    wire [32:0] rca_carry;
+    wire [31:0] rca_carry;
     assign rca_carry[0] = 1'b0;
 
     genvar i;

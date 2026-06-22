@@ -48,6 +48,9 @@ module tt_um_xoroshiro64plus_v2 (
         .valid_out  (valid_out_w)
     );
 
+	// List all unused inputs to prevent warnings
+	wire _unused = &{ui_in[7:6], 1'b0};
+	
     // ====================== Output Assignments ======================
     // uo_out[0] : serial_out  — PRNG bitstream
     // uo_out[1] : valid_out   — pulses high when a new 32-bit word begins
