@@ -49,7 +49,7 @@ module tt_um_xoroshiro64plus_v2 (
     );
 
 	// List all unused inputs to prevent warnings
-	wire _unused = &{ui_in[7:6], 1'b0};
+	// wire _unused = &{ui_in[7:6], 1'b0};
 	
     // ====================== Output Assignments ======================
     // uo_out[0] : serial_out  — PRNG bitstream
