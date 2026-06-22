@@ -37,8 +37,8 @@ pinout:
   # Outputs
   uo[0]: "serial_out_w"
   uo[1]: "valid_out_w"
-  uo[2]: ""
-  uo[3]: ""
+  uo[2]: "osc_ro_fast"
+  uo[3]: "osc_ro_slow"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
@@ -51,8 +51,8 @@ pinout:
   uio[3]: "seed_wen"
   uio[4]: "enable"
   uio[5]: "ro_noise"
-  uio[6]: "clk_sel"
-  uio[7]: "clk_sel"
+  uio[6]: ""
+  uio[7]: ""
 
 # Do not change!
 yaml_version: 6
